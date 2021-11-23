@@ -186,6 +186,7 @@ cython_debug/
 /*/datasets/*
 *.npz
 *.pt
+/*/_old/*
 
 
 

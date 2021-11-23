@@ -49,9 +49,16 @@ def compute_saliency_maps(X, y, model):
   ##############################################################################
   # Replace "pass" statement with your code
   
+  # forward pass 
   scores = model(X)
+
+  # compute the gradient of the unnormalized score 
+  # corresponding to the correct class
   loss = nn.functional.cross_entropy(scores, y)
   loss.backward()
+
+  # we take the absolute value of this gradient, 
+  # then take the maximum value over the 3 input channels
   saliency, _ = torch.max(torch.abs(X.grad.data), dim=1)
 
   ##############################################################################
@@ -94,7 +101,11 @@ def make_adversarial_attack(X, target_y, model, max_iter=100, verbose=True):
   # You can print your progress over iterations to check your algorithm.       #
   ##############################################################################
   # Replace "pass" statement with your code
+
+  # we  iterate for a few steps to be sure  
+  # the model is "completely" fooled
   counter = 0
+  
   for i in range(max_iter):
 
     # forward pass
@@ -102,19 +113,16 @@ def make_adversarial_attack(X, target_y, model, max_iter=100, verbose=True):
 
     # check if the model is fooled
     predicted_class = torch.argmax(scores, dim=1)
-    # print(f'iteration:{i} target-class:{target_y} predicted-class:{predicted_class}')
     if target_y == predicted_class.item():
       counter += 1
-      # print(f'counter:{counter}')
       if counter == 3:
-        # print('the model is fooled ...')
-        return X_adv
+        break
       
     # backward pass
     correct_score = scores[0, target_y]
     correct_score.backward()
 
-    # perform gradient ascent 
+    # perform gradient ascent (with normalized gradient)
     # see comments about scope in the next function
     with torch.no_grad():
       X_adv += learning_rate * X_adv.grad / torch.linalg.norm(X_adv.grad) 
