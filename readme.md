@@ -43,6 +43,20 @@ In all cases we use  gradient *ascent* which means we *increase* the value of a 
 > The reason is that the maximization of the class posterior can be achieved by minimising the scores of other classes. Therefore, we optimise `Sc` to ensure that the optimisation concentrates only on the class in question `c`. 
 
 ## Q4 - style transfer
+There are 3 main ideas behind style transfer: 
+- first of all we may construct an image using backprop like before; 
+
+> To visualise the image information that is encoded at
+different layers of the hierarchy one can perform gradient descent on a white noise image to find another image that matches the feature responses of the original image (Fig 1, content reconstructions) [24].
+
+- the key idea - we may extract content and style from an image *separately*: to extract content we may use feature maps from upper convolutional layers; to extract style we have to use a covariance matrix of features (Gram matrix); 
+
+> We therefore refer to the feature responses in higher layers of the network as the content representation. To obtain a representation of the style of an input image, we use a feature space designed to capture texture information [10].
+
+
+- so we extract content from one image and style from another; we have 2 loss functions for backprop and we may combine them (in the paper they combine them with some coefficients, in the assignment we just use sum of them);
+
+> Thus we jointly minimise the distance of the feature representations of a white noise image from the content representation of the photograph in one layer and the style representation of the painting defined on a number of layers of the Convolutional Neural Network.
 
 
 
