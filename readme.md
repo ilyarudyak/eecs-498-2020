@@ -1,5 +1,22 @@
 # assignment 4
 ## Q1 - pytorch autograd
+
+### barebones python
+To train a barebones model we can use raw tensor operations or thin wrappers:
+- initialize parameters using `nn.init.kaiming_normal_`; we also have manually require 
+gradients on our weights using `.requires_grad_()`;
+- write a forward pass as a function using `nn.functional` `F.linear` and `F.relu`; 
+here `F.linear(x, w, b)` is just a wrapper for `x @ w.T + b`; and `F.relu` is a wrapper
+for a strange function `F.clamp(min=0)`;
+
+### module API
+- instead of initializing our parameters manually we use classes from `nn.Module` like 
+`nn.Conv2d`; tensors are created with `required_grad = True` by default;
+- instead of creating a function for forward pass we create a class (which subclass `nn.Module`);
+we initialize layers in the constructor and create the net connectivity in `forward` method; 
+- its always a bit confusing that instead of calling `forward` directly we call the class itself:
+`out = model(x)`;
+
 ## Q2 - image captioning
 ## Q3 - network visualization
 
@@ -57,6 +74,12 @@ different layers of the hierarchy one can perform gradient descent on a white no
 - so we extract content from one image and style from another; we have 2 loss functions for backprop and we may combine them (in the paper they combine them with some coefficients, in the assignment we just use sum of them);
 
 > Thus we jointly minimise the distance of the feature representations of a white noise image from the content representation of the photograph in one layer and the style representation of the painting defined on a number of layers of the Convolutional Neural Network.
+
+# assignment 5. object detection.
+## Q1 YOLO
+
+## Q2 Faster R-CNN
+
 
 
 

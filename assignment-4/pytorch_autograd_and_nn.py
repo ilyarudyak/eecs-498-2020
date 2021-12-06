@@ -64,7 +64,11 @@ def three_layer_convnet(x, params):
   # Hint: F.linear, F.conv2d, F.relu, flatten (implemented above)                                   
   ##############################################################################
   # Replace "pass" statement with your code
-  pass
+  
+  out = F.relu(F.conv2d(input=x, weight=conv_w1, bias=conv_b1, padding=2))
+  out = F.relu(F.conv2d(input=out, weight=conv_w2, bias=conv_b2, padding=1))
+  scores = F.linear(flatten(out), weight=fc_w, bias=fc_b)
+
   ##############################################################################
   #                                 END OF YOUR CODE                             
   ##############################################################################
@@ -72,14 +76,14 @@ def three_layer_convnet(x, params):
 
 
 def initialize_three_layer_conv_part2(dtype=torch.float, device='cpu'):
-  '''
+  """
   Initializes weights for the three_layer_convnet for part II
   Inputs:
     - dtype: A torch data type object; all computations will be performed using
         this datatype. float is faster but less accurate, so you should use
         double for numeric gradient checking.
       - device: device to use for computation. 'cpu' or 'cuda'
-  '''
+  """
   # Input/Output dimenssions
   C, H, W = 3, 32, 32
   num_classes = 10
@@ -105,13 +109,24 @@ def initialize_three_layer_conv_part2(dtype=torch.float, device='cpu'):
   # You are given all the necessary variables above for initializing weights. 
   ##############################################################################
   # Replace "pass" statement with your code
-  pass
+
+  kwargs = {'dtype':dtype, 'device':device}
+  
+  conv_w1_shape = (channel_1, C, kernel_size_1, kernel_size_1)
+  conv_w1 = nn.init.kaiming_normal_(torch.empty(*conv_w1_shape, **kwargs)).requires_grad_()
+  conv_b1 = nn.init.zeros_(torch.empty(channel_1, **kwargs)).requires_grad_()
+
+  conv_w2_shape = (channel_2, channel_1, kernel_size_2, kernel_size_2)
+  conv_w2 = nn.init.kaiming_normal_(torch.empty(*conv_w2_shape, **kwargs)).requires_grad_()
+  conv_b2 = nn.init.zeros_(torch.empty(channel_2, **kwargs)).requires_grad_()
+
+  fc_w = nn.init.kaiming_normal_(torch.empty(num_classes, channel_2*H*W, **kwargs)).requires_grad_()
+  fc_b = nn.init.zeros_(torch.empty(num_classes, **kwargs)).requires_grad_()
+
   ##############################################################################
   #                                 END OF YOUR CODE                            
   ##############################################################################
   return [conv_w1, conv_b1, conv_w2, conv_b2, fc_w, fc_b]
-
-
 
 
 ################################################################################
@@ -127,7 +142,7 @@ class ThreeLayerConvNet(nn.Module):
     # model using Kaiming normal initialization, and zero out the bias vectors.     
     #                                       
     # The network architecture should be the same as in Part II:          
-  #   1. Convolutional layer with channel_1 5x5 filters with zero-padding of 2  
+    #   1. Convolutional layer with channel_1 5x5 filters with zero-padding of 2  
     #   2. ReLU                                   
     #   3. Convolutional layer with channel_2 3x3 filters with zero-padding of 1
     #   4. ReLU                                   
@@ -140,7 +155,18 @@ class ThreeLayerConvNet(nn.Module):
     # HINT: nn.Conv2d, nn.init.kaiming_normal_, nn.init.zeros_            
     ############################################################################
     # Replace "pass" statement with your code
-    pass
+
+    # input of this network
+    H = W = 32
+    
+    self.conv1 = nn.Conv2d(
+      in_channels=in_channel, out_channels=channel_1, kernel_size=(5, 5), padding=2
+    )
+    self.conv2 = nn.Conv2d(
+      in_channels=channel_1, out_channels=channel_2, kernel_size=(3, 3), padding=1
+    )
+    self.linear1 = nn.Linear(in_features=channel_2*H*W, out_features=num_classes)
+
     ############################################################################
     #                           END OF YOUR CODE                            
     ############################################################################
@@ -154,7 +180,11 @@ class ThreeLayerConvNet(nn.Module):
     # Hint: flatten (implemented at the start of part II)                          
     ############################################################################
     # Replace "pass" statement with your code
-    pass
+    
+    out = F.relu(self.conv1(x))
+    out = F.relu(self.conv2(out))
+    scores = self.linear1(flatten(out))
+
     ############################################################################
     #                            END OF YOUR CODE                          
     ############################################################################
@@ -162,9 +192,9 @@ class ThreeLayerConvNet(nn.Module):
 
 
 def initialize_three_layer_conv_part3():
-  '''
+  """
   Instantiates a ThreeLayerConvNet model and a corresponding optimizer for part III
-  '''
+  """
 
   # Parameters for ThreeLayerConvNet
   C = 3
@@ -186,7 +216,15 @@ def initialize_three_layer_conv_part3():
   # momentum, with L2 weight decay of 1e-4.                    
   ##############################################################################
   # Replace "pass" statement with your code
-  pass
+  
+  model = ThreeLayerConvNet(
+    in_channel=C, channel_1=channel_1, channel_2=channel_2, num_classes=num_classes
+  )
+
+  optimizer = optim.SGD(
+    params=model.parameters(), lr=learning_rate, weight_decay=weight_decay
+  )
+
   ##############################################################################
   #                                 END OF YOUR CODE                            
   ##############################################################################
@@ -206,9 +244,9 @@ class Flatten(nn.Module):
 
 
 def initialize_three_layer_conv_part4():
-  '''
+  """
   Instantiates a ThreeLayerConvNet model and a corresponding optimizer for part IV
-  '''
+  """
   # Input/Output dimenssions
   C, H, W = 3, 32, 32
   num_classes = 10
@@ -244,7 +282,29 @@ def initialize_three_layer_conv_part4():
   # Hint: nn.Sequential, Flatten (implemented at the start of Part IV)   
   ####################################################################################
   # Replace "pass" statement with your code
-  pass
+  
+  model = nn.Sequential(OrderedDict([
+    ('conv1', nn.Conv2d(
+      in_channels=C, out_channels=channel_1, kernel_size=kernel_size_1, padding=pad_size_1
+    )), 
+    ('relu1', nn.ReLU()),
+
+    ('conv2', nn.Conv2d(
+      in_channels=channel_1, out_channels=channel_2, kernel_size=kernel_size_2, padding=pad_size_2
+    )), 
+    ('relu2', nn.ReLU()),
+
+    ('flatten', Flatten()),
+    ('fc1', nn.Linear(in_features=channel_2*H*W, out_features=num_classes)),
+  ]))
+
+  optimizer = optim.SGD(
+    params=model.parameters(), 
+    lr=learning_rate, 
+    weight_decay=weight_decay,
+    momentum=momentum, 
+    nesterov=True)
+
   ################################################################################
   #                                 END OF YOUR CODE                             
   ################################################################################
@@ -271,7 +331,9 @@ class PlainBlock(nn.Module):
     # Store the result in self.net.                                            
     ############################################################################
     # Replace "pass" statement with your code
-    pass
+    
+    self.net = build_plain_block(Cin, Cout, downsample=downsample)
+
     ############################################################################
     #                                 END OF YOUR CODE                         #
     ############################################################################
@@ -295,13 +357,50 @@ class ResidualBlock(nn.Module):
     # Store the main block in self.block and the shortcut in self.shortcut.    #
     ############################################################################
     # Replace "pass" statement with your code
-    pass
+
+    self.block = build_plain_block(Cin, Cout, downsample=downsample)
+
+    if downsample:
+      self.shortcut = nn.Conv2d(in_channels=Cin, out_channels=Cout, kernel_size=1, stride=2)
+    else:
+      if Cin == Cout:
+        self.shortcut = nn.Identity()
+      else:
+        self.shortcut = nn.Conv2d(in_channels=Cin, out_channels=Cout, kernel_size=1, stride=1)
+    
     ############################################################################
     #                                 END OF YOUR CODE                         #
     ############################################################################
   
   def forward(self, x):
     return self.block(x) + self.shortcut(x)
+
+
+def build_plain_block(Cin, Cout, downsample=False):
+
+  if downsample: stride = 2
+  else: stride = 1
+  
+  plain_block = nn.Sequential(OrderedDict([
+
+    ('bn1', nn.BatchNorm2d(num_features=Cin)),
+    ('relu1', nn.ReLU()),
+
+    ('conv1', nn.Conv2d(
+      in_channels=Cin, out_channels=Cout, kernel_size=3, 
+      padding=1, stride=stride
+    )), 
+
+    ('bn2', nn.BatchNorm2d(num_features=Cout)),
+    ('relu2', nn.ReLU()),
+
+    ('conv2', nn.Conv2d(
+      in_channels=Cout, out_channels=Cout, kernel_size=3, 
+      padding=1, stride=1
+    ))
+  ]))  
+  
+  return plain_block
 
 
 class ResNet(nn.Module):
@@ -315,7 +414,13 @@ class ResNet(nn.Module):
     # Store the model in self.cnn.                                             #
     ############################################################################
     # Replace "pass" statement with your code
-    pass
+    
+    blocks = [ResNetStem()]
+    for arg in stage_args:
+      blocks.append(ResNetStage(*arg, block=block))
+    blocks.append(nn.AvgPool2d(8))
+    self.cnn = nn.Sequential(*blocks)
+
     ############################################################################
     #                                 END OF YOUR CODE                         #
     ############################################################################
@@ -328,7 +433,9 @@ class ResNet(nn.Module):
     # Store the output in `scores`.                                            #
     ############################################################################
     # Replace "pass" statement with your code
-    pass
+    
+    scores = self.fc(flatten(self.cnn(x)))
+
     ############################################################################
     #                                 END OF YOUR CODE                         #
     ############################################################################
