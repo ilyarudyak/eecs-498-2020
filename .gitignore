@@ -187,6 +187,10 @@ cython_debug/
 *.npz
 *.pt
 /*/_old/*
+*.tar
+*.gz
+/*/mAP/*
+assignment-5/mAP/*
 
 
 
