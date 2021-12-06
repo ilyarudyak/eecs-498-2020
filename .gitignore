@@ -191,6 +191,7 @@ cython_debug/
 *.gz
 /*/mAP/*
 assignment-5/mAP/*
+assignment-5/mAP/
 
 
 
