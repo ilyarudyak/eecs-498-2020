@@ -149,9 +149,17 @@ class FeatureExtractor(torch.nn.Module):
     super().__init__()
 
     self.mobilenet = models.mobilenet_v2(pretrained=True)
+
+    # that's a standard way to delete the last layer:
+    # https://stackoverflow.com/a/52548419/2047442
+    # - in fact .children() returns immediate children so it will be 2 Sequential modules
+    #   and we simply can take self.mobilenet.children()[0];
+    # - alternatively we probably may just take mobilenet.features
     self.mobilenet = torch.nn.Sequential(*list(self.mobilenet.children())[:-1]) # Remove the last classifier
 
-    # average pooling
+    # average pooling with input (N, 1280, 7, 7) - see mobilenet summary; 
+    # and kernel = 7 (224 / 32); stride = kernel = 7; so using standard formula for output we
+    # have output (N, 1280, 1, 1); in other words we just average each channel separately;
     if pooling:
       self.mobilenet.add_module('LastAvgPool', nn.AvgPool2d(math.ceil(reshape_size/32.))) # input: N x 1280 x 7 x 7
 
@@ -199,6 +207,11 @@ def GenerateGrid(batch_size, w_amap=7, h_amap=7, dtype=torch.float32, device='cu
   grid: A float32 tensor of shape (B, H', W', 2) giving the (x, y) coordinates
         of the centers of each feature for a feature map of shape (B, D, H', W')
   """
+
+  # looks like we generate here (B, 7, 7, 2) tensor of centers like (.5, .5), (1.5, .5)
+  # we build 7x7 grid on an original image and those are centers of each cell;
+  # so it's probably a better idea to call it CenterGenerator
+
   w_range = torch.arange(0, w_amap, dtype=dtype, device=device) + 0.5
   h_range = torch.arange(0, h_amap, dtype=dtype, device=device) + 0.5
 

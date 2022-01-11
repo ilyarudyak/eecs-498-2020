@@ -55,6 +55,7 @@ def visualize_dataset(X_data, y_data, samples_per_class, class_list):
     img = make_grid(samples, nrow=samples_per_class)
     return tensor_to_image(img)
 
+
 def detection_visualizer(img, idx_to_class, bbox=None, pred=None):
     """
     Data visualizer on the original image. Support both GT box input and proposal input.
@@ -71,14 +72,25 @@ def detection_visualizer(img, idx_to_class, bbox=None, pred=None):
 
     img_copy = np.array(img).astype('uint8')
 
+    # if bbox or pred are not provided we do nothing
+    # bbox has shape (n, 5) where n is number of actual bboxes in the image (not -1 entries)
     if bbox is not None:
+
+        # bbox.shape[0] = n
         for bbox_idx in range(bbox.shape[0]):
+
+            # coordinates of bbox
             one_bbox = bbox[bbox_idx][:4]
+
+            # draw a rectangle with cv2 with red color (255, 0, 0)
+            # 2 - line thickness
             cv2.rectangle(img_copy, 
                 (int(one_bbox[0]), int(one_bbox[1])), 
                 (int(one_bbox[2]), int(one_bbox[3])), 
                 (255, 0, 0), 2)
-            if bbox.shape[1] > 4: # if class info provided
+
+            # if class info provided add class name
+            if bbox.shape[1] > 4: 
                 obj_cls = idx_to_class[bbox[bbox_idx][4].item()]
                 cv2.putText(img_copy, '%s' % (obj_cls),
                           (int(one_bbox[0]), int(one_bbox[1])+15),
@@ -100,5 +112,5 @@ def detection_visualizer(img, idx_to_class, bbox=None, pred=None):
                             cv2.FONT_HERSHEY_PLAIN, 1.0, (0, 0, 255), thickness=1)
 
     plt.imshow(img_copy)
-    plt.axis('off')
+    # plt.axis('off')
     plt.show()
