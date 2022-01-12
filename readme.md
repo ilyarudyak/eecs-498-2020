@@ -78,6 +78,25 @@ different layers of the hierarchy one can perform gradient descent on a white no
 # assignment 5. object detection.
 ## Q1 YOLO
 
+### `ReferenceOnActivatedAnchors`
+- This is written for us but it's better to understand what this function is doing. The purpose of the fuction is more or less clear but its vectorized implementation is quite involved. Here's a brief analysis of the function (only for the case of `YOLO`). 
+- Much more detailed analysis is in a separate debugging file.
+- We illustrate computations with the image of a car (image 0 in the notebook).
+
+#### The purpose of the function:
+- We compute *activated* anchor boxes:
+	- We have the following items: 1) an image; 2) a GT bbox (just one for simplicity); 3) grid centers. 
+	- We do the following steps: 1) identify *responsible* cell - the center of GT bbox should be in this cell (cell `[3, 3]` in our case); 2) consider anchor boxes only from this cell; compute IoU between them and GT bbox (A=9 numbers); choose the anchor boxes with max IoU (`[0.1007, 0.4029, 0.7454, 0.5733, 0.3971, 0.5918, 0.5216, 0.6619, 0.4799]` in our example; max is `.7454` - so we need the anchor box with `index=2`). So in our example activated anchor box for our example is `[2, 3, 3]`.
+
+#### How do we compute it?
+- We have to compute 3 masks: 1) `bbox_mask` (B, N); 2) `grid_mask` (B, 1, H' * W', N); 3) `anc_mask` (B, A, H' * W', N):
+	- `grid_mask`: (a) it shows us a *responsible* cell (again the center of GT bbox is in this cell) for each GT bbox; (b) we don't locate somehow the center of a GT bbox, rather we just take the closest cell (min distance between centers of the cell and GT bbox; we use manhattan distance); (c) in our case this is cell `[3, 3]` (which corresponds to index 24 if we reshape `7x7` to `49`); in fact `grid_mask[0, 0, :, 0]` contains only one True value at index 24; (d) why is it this cell? well it has coordinates `[250.0000, 166.5000]`; GT bbox center is `[253.5000, 183.5000]` and the manhattan distance is 20.5 (and next grid center has distance 34.0714); in the debugging file we have a picture that shows that this is in fact the closest grid center;
+	- `anc_mask`: if we look at the shape of this mask we may see that 2 parameters are fixed; we fixed GT bbox and *responsible* grid cell for it; we now consider all `A=9` anchor boxes only for this grid cell; how can we define *activated* anchor box? we just compute IoU between those 9 anchor boxes and GT box; in our example its anchor with `index=2`; so we have `[2, 3, 3]` *activated* anchor box which is 122 in reshaped to `2*7*7` tensor; that's exactly what we get from this function: `activated_anc_ind = [122, 605, 871, 955]`.
+
+### `PredictionNetwork`
+- This is a very light network - only 2 layers of `1x1` convolution (as we remember the majority of the work is performed by the backbone net). We need to get quite a lot of output (for each cell in `7x7` grid): 1) `C` classes; 2) `4A` offsets for anchor boxes; 3) `A` confidence scores. So out has the shape `(B, 5*A+C, H, W)`. We assume that cofidence scores is at `(:, :A, :, :)`.
+- The only complication in this fuction - during training we have to use only activated anchors. THis is technically less involved as the main complications are inside the previous function . 
+
 ## Q2 Faster R-CNN
 
 
