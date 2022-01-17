@@ -32,14 +32,15 @@ def sample_noise(batch_size, noise_dim, dtype=torch.float, device='cpu'):
   # TODO: Implement sample_noise.                                              #
   ##############################################################################
   # Replace "pass" statement with your code
-  pass
+  
+  noise = torch.rand([batch_size, noise_dim])
+  noise = -2 * noise + 1.0
 
   ##############################################################################
   #                              END OF YOUR CODE                              #
   ##############################################################################
 
   return noise
-
 
 
 def discriminator():
@@ -75,6 +76,7 @@ def generator(noise_dim=NOISE_DIM):
 
   return model  
 
+
 def discriminator_loss(logits_real, logits_fake):
   """
   Computes the discriminator loss described above.
@@ -97,6 +99,7 @@ def discriminator_loss(logits_real, logits_fake):
   ##############################################################################
   return loss
 
+
 def generator_loss(logits_fake):
   """
   Computes the generator loss described above.
@@ -117,6 +120,7 @@ def generator_loss(logits_fake):
   #                              END OF YOUR CODE                              #
   ##############################################################################
   return loss
+
 
 def get_optimizer(model):
   """
@@ -163,6 +167,7 @@ def ls_discriminator_loss(scores_real, scores_fake):
   ##############################################################################
   return loss
 
+
 def ls_generator_loss(scores_fake):
   """
   Computes the Least-Squares GAN loss for the generator.
@@ -201,6 +206,7 @@ def build_dc_classifier():
   ############################################################################
 
   return model
+
 
 def build_dc_generator(noise_dim=NOISE_DIM):
   """
