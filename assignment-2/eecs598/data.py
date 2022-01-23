@@ -33,7 +33,7 @@ def _extract_tensors(dset, num=None, x_dtype=torch.float32):
   return x, y
 
 
-def cifar10(num_train=None, num_test=None, x_dtype=torch.float32):
+def cifar10(num_train=None, num_test=None, x_dtype=torch.float32, dataset_root='.'):
   """
   Return the CIFAR10 dataset, automatically downloading it if necessary.
   This function can also subsample the dataset.
@@ -52,8 +52,8 @@ def cifar10(num_train=None, num_test=None, x_dtype=torch.float32):
   - y_test: int64 tensor of shape (num_test, 3, 32, 32)
   """
   download = not os.path.isdir('cifar-10-batches-py')
-  dset_train = CIFAR10(root='.', download=download, train=True)
-  dset_test = CIFAR10(root='.', train=False)
+  dset_train = CIFAR10(root=dataset_root, download=download, train=True)
+  dset_test = CIFAR10(root=dataset_root, train=False)
   x_train, y_train = _extract_tensors(dset_train, num_train, x_dtype)
   x_test, y_test = _extract_tensors(dset_test, num_test, x_dtype)
  
@@ -65,7 +65,8 @@ def preprocess_cifar10(
     show_examples=True,
     bias_trick=False,
     validation_ratio=0.2,
-    dtype=torch.float32):
+    dtype=torch.float32,
+    dataset_root='.'):
   """
   Returns a preprocessed version of the CIFAR10 dataset, automatically
   downloading if necessary. We perform the following steps:
@@ -98,7 +99,7 @@ def preprocess_cifar10(
   if bias_trick is False, then D = 32 * 32 * 3 = 3072;
   if bias_trick is True then D = 1 + 32 * 32 * 3 = 3073.
   """
-  X_train, y_train, X_test, y_test = cifar10(x_dtype=dtype)
+  X_train, y_train, X_test, y_test = cifar10(x_dtype=dtype, dataset_root=dataset_root)
 
   # Move data to the GPU
   if cuda:
