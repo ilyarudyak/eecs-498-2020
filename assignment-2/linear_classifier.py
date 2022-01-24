@@ -580,7 +580,7 @@ def softmax_loss_vectorized(W, X, y, reg):
 
   # compute gradient
   dscores = probs.clone()
-  dscores[torch.arange(N), y] = -1
+  dscores[torch.arange(N), y] -= 1
   # (D, C) = (D, N) @ (N, C)
   dW = X.T @ dscores
 
@@ -619,8 +619,8 @@ def softmax_get_search_params():
   # classifier.                                                             #
   ###########################################################################
   # Replace "pass" statement with your code
-  learning_rates = [1.1*1e-2, 1.05*1e-2, 1e-2, .95*1e-2, .9*1e-2]
-  regularization_strengths =  [1.25*1e-4, 1e-4, .75*1e-4]
+  learning_rates = [3.1*1e-2, 3*1e-2, 2.9*1e-2]
+  regularization_strengths =  [1.5*1e-4, 1.25*1e-4, 1.1*1e-4, 1e-4]
   ###########################################################################
   #                           END OF YOUR CODE                              #
   ###########################################################################
