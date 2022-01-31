@@ -6,7 +6,6 @@ import torch
 import random
 from a3_helper import svm_loss, softmax_loss
 from eecs598 import Solver
-
 def hello_fully_connected_networks():
     """
     This is a sample function that we will try to import and run to ensure that
