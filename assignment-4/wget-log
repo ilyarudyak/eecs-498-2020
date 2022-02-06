@@ -1,874 +1,0 @@
---2021-11-16 17:42:16--  http://web.eecs.umich.edu/~justincj/teaching/eecs498/coco.pt
-Resolving web.eecs.umich.edu (web.eecs.umich.edu)... 141.212.113.214
-Connecting to web.eecs.umich.edu (web.eecs.umich.edu)|141.212.113.214|:80... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 396583632 (378M)
-Saving to: ‘./datasets/coco.pt’
-
-coco.pt               0%[                    ] 464.73K  8.48KB/s    eta 14h 19mcoco.pt               0%[                    ] 471.80K  8.78KB/s    eta 14h 19mcoco.pt               0%[                    ] 474.63K  8.79KB/s    eta 14h 19mcoco.pt               0%[                    ] 480.28K  8.55KB/s    eta 14h 19mcoco.pt               0%[                    ] 483.11K  8.57KB/s    eta 14h 19mcoco.pt               0%[                    ] 488.77K  8.51KB/s    eta 14h 7m coco.pt               0%[                    ] 495.84K  8.51KB/s    eta 14h 7m coco.pt               0%[                    ] 502.91K  8.65KB/s    eta 14h 0m coco.pt               0%[                    ] 507.15K  9.38KB/s    eta 14h 0m coco.pt               0%[                    ] 514.22K  9.32KB/s    eta 14h 0m coco.pt               0%[                    ] 517.05K  8.85KB/s    eta 14h 0m coco.pt               0%[                    ] 518.46K  8.29KB/s    eta 14h 0m coco.pt               0%[                    ] 521.29K  8.31KB/s    eta 14h 0m coco.pt               0%[                    ] 525.53K  8.50KB/s    eta 13h 59mcoco.pt               0%[                    ] 531.19K  8.80KB/s    eta 13h 59mcoco.pt               0%[                    ] 532.60K  8.52KB/s    eta 13h 59mcoco.pt               0%[                    ] 536.84K  8.50KB/s    eta 13h 59mcoco.pt               0%[                    ] 542.50K  9.18KB/s    eta 13h 48mcoco.pt               0%[                    ] 545.33K  9.34KB/s    eta 13h 48mcoco.pt               0%[                    ] 549.57K  9.35KB/s    eta 13h 48mcoco.pt               0%[                    ] 559.47K  11.0KB/s    eta 13h 48mcoco.pt               0%[                    ] 562.30K  11.1KB/s    eta 13h 34mcoco.pt               0%[                    ] 565.13K  11.1KB/s    eta 13h 34mcoco.pt               0%[                    ] 572.20K  11.3KB/s    eta 13h 34mcoco.pt               0%[                    ] 572.20K  10.1KB/s    eta 13h 38mcoco.pt               0%[                    ] 575.02K  9.83KB/s    eta 13h 38mcoco.pt               0%[                    ] 579.27K  9.95KB/s    eta 13h 38mcoco.pt               0%[                    ] 580.68K  9.79KB/s    eta 13h 38mcoco.pt               0%[                    ] 584.92K  9.95KB/s    eta 13h 33mcoco.pt               0%[                    ] 587.75K  9.60KB/s    eta 13h 33mcoco.pt               0%[                    ] 589.17K  8.95KB/s    eta 13h 38mcoco.pt               0%[                    ] 589.17K  8.03KB/s    eta 13h 38mcoco.pt               0%[                    ] 594.82K  9.32KB/s    eta 13h 45mcoco.pt               0%[                    ] 599.06K  9.50KB/s    eta 13h 45mcoco.pt               0%[                    ] 601.89K  8.81KB/s    eta 13h 48mcoco.pt               0%[                    ] 603.31K  8.21KB/s    eta 13h 48mcoco.pt               0%[                    ] 607.55K  8.07KB/s    eta 13h 48mcoco.pt               0%[                    ] 607.55K  7.33KB/s    eta 13h 58mcoco.pt               0%[                    ] 607.55K  6.72KB/s    eta 13h 58mcoco.pt               0%[                    ] 610.38K  6.74KB/s    eta 14h 9m coco.pt               0%[                    ] 611.79K  6.51KB/s    eta 14h 9m coco.pt               0%[                    ] 623.10K  6.79KB/s    eta 14h 4m coco.pt               0%[                    ] 624.52K  6.57KB/s    eta 14h 4m coco.pt               0%[                    ] 628.76K  5.77KB/s    eta 14h 6m coco.pt               0%[                    ] 634.42K  6.02KB/s    eta 14h 6m coco.pt               0%[                    ] 634.42K  5.58KB/s    eta 14h 13mcoco.pt               0%[                    ] 635.83K  5.17KB/s    eta 14h 13mcoco.pt               0%[                    ] 643.83K  5.18KB/s    eta 14h 15mcoco.pt               0%[                    ] 645.73K  5.61KB/s    eta 14h 15mcoco.pt               0%[                    ] 647.14K  5.29KB/s    eta 14h 15mcoco.pt               0%[                    ] 652.80K  5.35KB/s    eta 14h 19mcoco.pt               0%[                    ] 660.80K  5.43KB/s    eta 14h 19mcoco.pt               0%[                    ] 668.35K  5.69KB/s    eta 14h 12mcoco.pt               0%[                    ] 671.18K  5.88KB/s    eta 14h 12mcoco.pt               0%[                    ] 672.59K  5.79KB/s    eta 14h 19mcoco.pt               0%[                    ] 675.42K  5.71KB/s    eta 14h 19mcoco.pt               0%[                    ] 681.08K  6.07KB/s    eta 14h 18mcoco.pt               0%[                    ] 686.74K  6.18KB/s    eta 14h 18mcoco.pt               0%[                    ] 692.39K  7.36KB/s    eta 14h 18mcoco.pt               0%[                    ] 698.05K  7.58KB/s    eta 14h 11mcoco.pt               0%[                    ] 700.88K  7.21KB/s    eta 14h 11mcoco.pt               0%[                    ] 700.88K  6.62KB/s    eta 14h 18mcoco.pt               0%[                    ] 700.88K  6.12KB/s    eta 14h 18mcoco.pt               0%[                    ] 700.88K  5.70KB/s    eta 14h 35mcoco.pt               0%[                    ] 702.29K  5.59KB/s    eta 14h 35mcoco.pt               0%[                    ] 702.29K  5.23KB/s    eta 14h 48mcoco.pt               0%[                    ] 702.29K  4.92KB/s    eta 14h 48mcoco.pt               0%[                    ] 702.29K  4.64KB/s    eta 15h 6m coco.pt               0%[                    ] 703.70K  4.39KB/s    eta 15h 6m coco.pt               0%[                    ] 706.53K  4.46KB/s    eta 15h 12mcoco.pt               0%[                    ] 709.36K  4.35KB/s    eta 15h 12mcoco.pt               0%[                    ] 709.36K  4.12KB/s    eta 15h 19mcoco.pt               0%[                    ] 709.36K  3.92KB/s    eta 15h 19mcoco.pt               0%[                    ] 709.36K  3.73KB/s    eta 15h 36mcoco.pt               0%[                    ] 709.36K  3.56KB/s    eta 15h 36mcoco.pt               0%[                    ] 709.36K  3.41KB/s    eta 15h 53mcoco.pt               0%[                    ] 709.36K  --.-KB/s    eta 15h 53mcoco.pt               0%[                    ] 709.36K  --.-KB/s    eta 16h 11mcoco.pt               0%[                    ] 709.36K  --.-KB/s    eta 16h 11mcoco.pt               0%[                    ] 709.36K  --.-KB/s    eta 16h 28mcoco.pt               0%[                    ] 709.36K  --.-KB/s    eta 16h 28mcoco.pt               0%[                    ] 713.60K  4.24KB/s    eta 16h 39mcoco.pt               0%[                    ] 719.26K  8.20KB/s    eta 16h 39mcoco.pt               0%[                    ] 722.09K  8.94KB/s    eta 16h 39mcoco.pt               0%[                    ] 722.09K  5.36KB/s    eta 16h 39mcoco.pt               0%[                    ] 733.40K  8.88KB/s    eta 16h 39mcoco.pt               0%[                    ] 739.06K  10.2KB/s    eta 16h 39mcoco.pt               0%[                    ] 744.71K  11.3KB/s    eta 16h 39mcoco.pt               0%[                    ] 744.71K  8.64KB/s    eta 16h 24mcoco.pt               0%[                    ] 746.13K  7.47KB/s    eta 16h 24mcoco.pt               0%[                    ] 746.13K  6.26KB/s    eta 16h 37mcoco.pt               0%[                    ] 746.13K  5.39KB/s    eta 16h 37mcoco.pt               0%[                    ] 754.13K  5.77KB/s    eta 16h 43mcoco.pt               0%[                    ] 758.85K  5.88KB/s    eta 16h 43mcoco.pt               0%[                    ] 763.09K  6.06KB/s    eta 16h 40mcoco.pt               0%[                    ] 768.75K  6.19KB/s    eta 16h 40mcoco.pt               0%[                    ] 771.58K  6.33KB/s    eta 16h 40mcoco.pt               0%[                    ] 772.99K  6.35KB/s    eta 16h 37mcoco.pt               0%[                    ] 781.48K  6.77KB/s    eta 16h 37mcoco.pt               0%[                    ] 784.31K  6.63KB/s    eta 16h 33mcoco.pt               0%[                    ] 787.13K  6.74KB/s    eta 16h 33mcoco.pt               0%[                    ] 789.96K  6.69KB/s    eta 16h 33mcoco.pt               0%[                    ] 795.62K  6.89KB/s    eta 16h 29mcoco.pt               0%[                    ] 797.03K  6.86KB/s    eta 16h 29mcoco.pt               0%[                    ] 802.69K  7.12KB/s    eta 16h 29mcoco.pt               0%[                    ] 808.34K  7.10KB/s    eta 16h 23mcoco.pt               0%[                    ] 809.76K  6.72KB/s    eta 16h 23mcoco.pt               0%[                    ] 816.83K  7.08KB/s    eta 16h 23mcoco.pt               0%[                    ] 819.66K  7.03KB/s    eta 16h 19mcoco.pt               0%[                    ] 823.90K  6.90KB/s    eta 16h 19mcoco.pt               0%[                    ] 826.73K  6.65KB/s    eta 16h 19mcoco.pt               0%[                    ] 833.80K  7.97KB/s    eta 16h 19mcoco.pt               0%[                    ] 836.63K  9.32KB/s    eta 16h 12mcoco.pt               0%[                    ] 839.45K  8.81KB/s    eta 16h 12mcoco.pt               0%[                    ] 842.28K  8.86KB/s    eta 16h 14mcoco.pt               0%[                    ] 847.94K  8.90KB/s    eta 16h 14mcoco.pt               0%[                    ] 852.18K  9.17KB/s    eta 16h 14mcoco.pt               0%[                    ] 853.59K  8.99KB/s    eta 16h 10mcoco.pt               0%[                    ] 859.25K  9.06KB/s    eta 16h 10mcoco.pt               0%[                    ] 864.91K  9.85KB/s    eta 16h 10mcoco.pt               0%[                    ] 869.15K  10.0KB/s    eta 16h 10mcoco.pt               0%[                    ] 877.15K  10.7KB/s    eta 15h 53mcoco.pt               0%[                    ] 879.05K  10.3KB/s    eta 15h 53mcoco.pt               0%[                    ] 886.12K  10.7KB/s    eta 15h 53mcoco.pt               0%[                    ] 893.19K  10.9KB/s    eta 15h 48mcoco.pt               0%[                    ] 897.43K  10.6KB/s    eta 15h 48mcoco.pt               0%[                    ] 901.67K  10.9KB/s    eta 15h 46mcoco.pt               0%[                    ] 901.67K  9.81KB/s    eta 15h 46mcoco.pt               0%[                    ] 903.09K  8.83KB/s    eta 15h 56mcoco.pt               0%[                    ] 905.92K  8.59KB/s    eta 15h 56mcoco.pt               0%[                    ] 910.16K  8.58KB/s    eta 15h 56mcoco.pt               0%[                    ] 915.81K  8.86KB/s    eta 15h 50mcoco.pt               0%[                    ] 915.81K  8.09KB/s    eta 15h 50mcoco.pt               0%[                    ] 923.81K  8.14KB/s    eta 15h 52mcoco.pt               0%[                    ] 931.37K  8.93KB/s    eta 15h 52mcoco.pt               0%[                    ] 932.78K  9.22KB/s    eta 15h 52mcoco.pt               0%[                    ] 935.61K  9.00KB/s    eta 15h 48mcoco.pt               0%[                    ] 935.61K  8.24KB/s    eta 15h 48mcoco.pt               0%[                    ] 935.61K  7.60KB/s    eta 16h 2m coco.pt               0%[                    ] 949.75K  8.10KB/s    eta 16h 2m coco.pt               0%[                    ] 952.58K  8.09KB/s    eta 15h 52mcoco.pt               0%[                    ] 952.58K  7.50KB/s    eta 15h 52mcoco.pt               0%[                    ] 952.58K  7.00KB/s    eta 16h 5m coco.pt               0%[                    ] 952.58K  6.56KB/s    eta 16h 5m coco.pt               0%[                    ] 958.24K  6.41KB/s    eta 16h 10mcoco.pt               0%[                    ] 959.65K  6.04KB/s    eta 16h 10mcoco.pt               0%[                    ] 962.48K  5.85KB/s    eta 16h 12mcoco.pt               0%[                    ] 965.31K  5.43KB/s    eta 16h 12mcoco.pt               0%[                    ] 968.13K  5.57KB/s    eta 16h 12mcoco.pt               0%[                    ] 970.96K  5.40KB/s    eta 16h 11mcoco.pt               0%[                    ] 979.45K  5.49KB/s    eta 16h 11mcoco.pt               0%[                    ] 982.27K  5.44KB/s    eta 16h 11mcoco.pt               0%[                    ] 987.93K  5.71KB/s    eta 16h 2m coco.pt               0%[                    ] 987.93K  5.37KB/s    eta 16h 2m coco.pt               0%[                    ] 987.93K  5.07KB/s    eta 16h 14mcoco.pt               0%[                    ] 990.76K  5.57KB/s    eta 16h 14mcoco.pt               0%[                    ] 996.42K  5.86KB/s    eta 16h 14mcoco.pt               0%[                    ] 999.24K  5.62KB/s    eta 16h 11mcoco.pt               0%[                    ]   1003K  5.45KB/s    eta 16h 11mcoco.pt               0%[                    ]   1006K  5.56KB/s    eta 16h 11mcoco.pt               0%[                    ]   1011K  5.34KB/s    eta 16h 11mcoco.pt               0%[                    ]   1015K  5.62KB/s    eta 16h 4m coco.pt               0%[                    ]   1018K  5.46KB/s    eta 16h 4m coco.pt               0%[                    ]   1020K  5.36KB/s    eta 16h 9m coco.pt               0%[                    ]   1020K  5.05KB/s    eta 16h 9m coco.pt               0%[                    ]   1.00M  5.63KB/s    eta 16h 11mcoco.pt               0%[                    ]   1.01M  5.97KB/s    eta 16h 11mcoco.pt               0%[                    ]   1.02M  5.97KB/s    eta 16h 11mcoco.pt               0%[                    ]   1.03M  8.01KB/s    eta 16h 11mcoco.pt               0%[                    ]   1.03M  8.34KB/s    eta 15h 53mcoco.pt               0%[                    ]   1.03M  8.43KB/s    eta 15h 53mcoco.pt               0%[                    ]   1.04M  8.79KB/s    eta 15h 53mcoco.pt               0%[                    ]   1.04M  8.75KB/s    eta 15h 50mcoco.pt               0%[                    ]   1.05M  8.34KB/s    eta 15h 50mcoco.pt               0%[                    ]   1.05M  8.55KB/s    eta 15h 47mcoco.pt               0%[                    ]   1.06M  8.56KB/s    eta 15h 47mcoco.pt               0%[                    ]   1.06M  8.14KB/s    eta 15h 47mcoco.pt               0%[                    ]   1.06M  9.22KB/s    eta 15h 49mcoco.pt               0%[                    ]   1.07M  9.42KB/s    eta 15h 49mcoco.pt               0%[                    ]   1.07M  8.85KB/s    eta 15h 49mcoco.pt               0%[                    ]   1.08M  9.27KB/s    eta 15h 49mcoco.pt               0%[                    ]   1.08M  8.83KB/s    eta 15h 49mcoco.pt               0%[                    ]   1.09M  8.78KB/s    eta 15h 42mcoco.pt               0%[                    ]   1.10M  9.93KB/s    eta 15h 42mcoco.pt               0%[                    ]   1.10M  10.2KB/s    eta 15h 41mcoco.pt               0%[                    ]   1.11M  9.49KB/s    eta 15h 41mcoco.pt               0%[                    ]   1.11M  9.64KB/s    eta 15h 41mcoco.pt               0%[                    ]   1.11M  9.11KB/s    eta 15h 41mcoco.pt               0%[                    ]   1.11M  8.45KB/s    eta 15h 39mcoco.pt               0%[                    ]   1.11M  7.73KB/s    eta 15h 39mcoco.pt               0%[                    ]   1.12M  7.54KB/s    eta 15h 46mcoco.pt               0%[                    ]   1.12M  6.96KB/s    eta 15h 46mcoco.pt               0%[                    ]   1.12M  6.82KB/s    eta 15h 51mcoco.pt               0%[                    ]   1.12M  6.32KB/s    eta 15h 51mcoco.pt               0%[                    ]   1.13M  6.98KB/s    eta 15h 50mcoco.pt               0%[                    ]   1.13M  6.76KB/s    eta 15h 50mcoco.pt               0%[                    ]   1.14M  6.98KB/s    eta 15h 50mcoco.pt               0%[                    ]   1.14M  6.90KB/s    eta 15h 45mcoco.pt               0%[                    ]   1.14M  7.16KB/s    eta 15h 45mcoco.pt               0%[                    ]   1.14M  6.89KB/s    eta 15h 45mcoco.pt               0%[                    ]   1.15M  6.75KB/s    eta 15h 45mcoco.pt               0%[                    ]   1.15M  6.96KB/s    eta 15h 45mcoco.pt               0%[                    ]   1.16M  6.69KB/s    eta 15h 45mcoco.pt               0%[                    ]   1.16M  6.19KB/s    eta 15h 45mcoco.pt               0%[                    ]   1.16M  6.72KB/s    eta 15h 46mcoco.pt               0%[                    ]   1.17M  6.46KB/s    eta 15h 46mcoco.pt               0%[                    ]   1.17M  6.34KB/s    eta 15h 46mcoco.pt               0%[                    ]   1.18M  6.62KB/s    eta 15h 43mcoco.pt               0%[                    ]   1.18M  6.34KB/s    eta 15h 43mcoco.pt               0%[                    ]   1.18M  5.92KB/s    eta 15h 48mcoco.pt               0%[                    ]   1.19M  6.11KB/s    eta 15h 48mcoco.pt               0%[                    ]   1.19M  6.00KB/s    eta 15h 44mcoco.pt               0%[                    ]   1.19M  6.03KB/s    eta 15h 44mcoco.pt               0%[                    ]   1.20M  6.62KB/s    eta 15h 47mcoco.pt               0%[                    ]   1.20M  7.29KB/s    eta 15h 47mcoco.pt               0%[                    ]   1.20M  7.79KB/s    eta 15h 47mcoco.pt               0%[                    ]   1.21M  7.35KB/s    eta 15h 45mcoco.pt               0%[                    ]   1.21M  7.32KB/s    eta 15h 45mcoco.pt               0%[                    ]   1.21M  6.75KB/s    eta 15h 48mcoco.pt               0%[                    ]   1.22M  6.22KB/s    eta 15h 48mcoco.pt               0%[                    ]   1.22M  6.49KB/s    eta 15h 48mcoco.pt               0%[                    ]   1.22M  6.47KB/s    eta 15h 48mcoco.pt               0%[                    ]   1.23M  6.91KB/s    eta 15h 48mcoco.pt               0%[                    ]   1.23M  6.54KB/s    eta 15h 48mcoco.pt               0%[                    ]   1.24M  7.11KB/s    eta 15h 48mcoco.pt               0%[                    ]   1.24M  7.00KB/s    eta 15h 48mcoco.pt               0%[                    ]   1.24M  7.37KB/s    eta 15h 48mcoco.pt               0%[                    ]   1.25M  7.57KB/s    eta 15h 39mcoco.pt               0%[                    ]   1.25M  7.19KB/s    eta 15h 39mcoco.pt               0%[                    ]   1.25M  7.06KB/s    eta 15h 39mcoco.pt               0%[                    ]   1.26M  8.17KB/s    eta 15h 38mcoco.pt               0%[                    ]   1.26M  8.09KB/s    eta 15h 38mcoco.pt               0%[                    ]   1.26M  8.20KB/s    eta 15h 38mcoco.pt               0%[                    ]   1.27M  8.49KB/s    eta 15h 36mcoco.pt               0%[                    ]   1.27M  8.95KB/s    eta 15h 36mcoco.pt               0%[                    ]   1.28M  9.12KB/s    eta 15h 36mcoco.pt               0%[                    ]   1.28M  9.15KB/s    eta 15h 36mcoco.pt               0%[                    ]   1.28M  8.25KB/s    eta 15h 35mcoco.pt               0%[                    ]   1.29M  8.61KB/s    eta 15h 35mcoco.pt               0%[                    ]   1.30M  8.74KB/s    eta 15h 29mcoco.pt               0%[                    ]   1.30M  10.4KB/s    eta 15h 29mcoco.pt               0%[                    ]   1.30M  10.1KB/s    eta 15h 29mcoco.pt               0%[                    ]   1.31M  10.6KB/s    eta 15h 29mcoco.pt               0%[                    ]   1.31M  10.6KB/s    eta 15h 24mcoco.pt               0%[                    ]   1.31M  10.7KB/s    eta 15h 24mcoco.pt               0%[                    ]   1.32M  9.80KB/s    eta 15h 24mcoco.pt               0%[                    ]   1.32M  10.2KB/s    eta 15h 23mcoco.pt               0%[                    ]   1.33M  10.6KB/s    eta 15h 23mcoco.pt               0%[                    ]   1.33M  10.8KB/s    eta 15h 23mcoco.pt               0%[                    ]   1.34M  11.0KB/s    eta 15h 23mcoco.pt               0%[                    ]   1.34M  10.8KB/s    eta 15h 18mcoco.pt               0%[                    ]   1.34M  10.3KB/s    eta 15h 18mcoco.pt               0%[                    ]   1.35M  10.8KB/s    eta 15h 18mcoco.pt               0%[                    ]   1.36M  11.0KB/s    eta 15h 18mcoco.pt               0%[                    ]   1.36M  11.3KB/s    eta 15h 11mcoco.pt               0%[                    ]   1.36M  10.3KB/s    eta 15h 11mcoco.pt               0%[                    ]   1.36M  9.81KB/s    eta 15h 15mcoco.pt               0%[                    ]   1.37M  9.40KB/s    eta 15h 15mcoco.pt               0%[                    ]   1.37M  9.24KB/s    eta 15h 15mcoco.pt               0%[                    ]   1.37M  8.41KB/s    eta 15h 15mcoco.pt               0%[                    ]   1.38M  9.42KB/s    eta 15h 16mcoco.pt               0%[                    ]   1.38M  8.61KB/s    eta 15h 16mcoco.pt               0%[                    ]   1.38M  8.71KB/s    eta 15h 16mcoco.pt               0%[                    ]   1.38M  7.93KB/s    eta 15h 16mcoco.pt               0%[                    ]   1.38M  7.28KB/s    eta 15h 25mcoco.pt               0%[                    ]   1.38M  6.73KB/s    eta 15h 25mcoco.pt               0%[                    ]   1.38M  6.26KB/s    eta 15h 34mcoco.pt               0%[                    ]   1.39M  6.12KB/s    eta 15h 34mcoco.pt               0%[                    ]   1.39M  5.74KB/s    eta 15h 34mcoco.pt               0%[                    ]   1.39M  5.38KB/s    eta 15h 40mcoco.pt               0%[                    ]   1.39M  5.39KB/s    eta 15h 40mcoco.pt               0%[                    ]   1.40M  5.85KB/s    eta 15h 40mcoco.pt               0%[                    ]   1.40M  6.11KB/s    eta 15h 40mcoco.pt               0%[                    ]   1.41M  6.00KB/s    eta 15h 31mcoco.pt               0%[                    ]   1.41M  5.63KB/s    eta 15h 31mcoco.pt               0%[                    ]   1.41M  5.38KB/s    eta 15h 31mcoco.pt               0%[                    ]   1.42M  5.23KB/s    eta 15h 35mcoco.pt               0%[                    ]   1.42M  5.35KB/s    eta 15h 35mcoco.pt               0%[                    ]   1.42M  5.35KB/s    eta 15h 35mcoco.pt               0%[                    ]   1.43M  5.09KB/s    eta 15h 32mcoco.pt               0%[                    ]   1.43M  5.02KB/s    eta 15h 32mcoco.pt               0%[                    ]   1.44M  5.24KB/s    eta 15h 29mcoco.pt               0%[                    ]   1.44M  5.64KB/s    eta 15h 29mcoco.pt               0%[                    ]   1.45M  5.96KB/s    eta 15h 29mcoco.pt               0%[                    ]   1.45M  6.17KB/s    eta 15h 29mcoco.pt               0%[                    ]   1.46M  6.19KB/s    eta 15h 29mcoco.pt               0%[                    ]   1.46M  6.61KB/s    eta 15h 20mcoco.pt               0%[                    ]   1.47M  6.56KB/s    eta 15h 20mcoco.pt               0%[                    ]   1.47M  6.11KB/s    eta 15h 24mcoco.pt               0%[                    ]   1.48M  9.90KB/s    eta 15h 24mcoco.pt               0%[                    ]   1.48M  11.5KB/s    eta 15h 24mcoco.pt               0%[                    ]   1.49M  10.5KB/s    eta 15h 15mcoco.pt               0%[                    ]   1.49M  10.4KB/s    eta 15h 15mcoco.pt               0%[                    ]   1.50M  10.7KB/s    eta 15h 15mcoco.pt               0%[                    ]   1.50M  11.2KB/s    eta 15h 15mcoco.pt               0%[                    ]   1.51M  12.3KB/s    eta 15h 10mcoco.pt               0%[                    ]   1.51M  11.5KB/s    eta 15h 10mcoco.pt               0%[                    ]   1.51M  11.5KB/s    eta 15h 11mcoco.pt               0%[                    ]   1.51M  10.3KB/s    eta 15h 11mcoco.pt               0%[                    ]   1.52M  11.3KB/s    eta 15h 9m coco.pt               0%[                    ]   1.53M  11.6KB/s    eta 15h 9m coco.pt               0%[                    ]   1.53M  10.7KB/s    eta 15h 9m coco.pt               0%[                    ]   1.54M  10.5KB/s    eta 15h 9m coco.pt               0%[                    ]   1.54M  10.2KB/s    eta 15h 9m coco.pt               0%[                    ]   1.54M  9.75KB/s    eta 15h 8m coco.pt               0%[                    ]   1.55M  9.71KB/s    eta 15h 8m coco.pt               0%[                    ]   1.55M  9.77KB/s    eta 15h 8m coco.pt               0%[                    ]   1.56M  10.4KB/s    eta 15h 3m coco.pt               0%[                    ]   1.56M  10.1KB/s    eta 15h 3m coco.pt               0%[                    ]   1.56M  9.46KB/s    eta 15h 3m coco.pt               0%[                    ]   1.57M  8.84KB/s    eta 15h 6m coco.pt               0%[                    ]   1.57M  8.99KB/s    eta 15h 6m coco.pt               0%[                    ]   1.57M  9.07KB/s    eta 15h 6m coco.pt               0%[                    ]   1.58M  9.08KB/s    eta 15h 6m coco.pt               0%[                    ]   1.58M  8.91KB/s    eta 15h 6m coco.pt               0%[                    ]   1.59M  9.21KB/s    eta 14h 59mcoco.pt               0%[                    ]   1.59M  9.78KB/s    eta 14h 59mcoco.pt               0%[                    ]   1.59M  9.56KB/s    eta 14h 59mcoco.pt               0%[                    ]   1.59M  9.57KB/s    eta 14h 59mcoco.pt               0%[                    ]   1.60M  9.31KB/s    eta 14h 59mcoco.pt               0%[                    ]   1.60M  9.18KB/s    eta 14h 59mcoco.pt               0%[                    ]   1.60M  9.23KB/s    eta 15h 0m coco.pt               0%[                    ]   1.61M  8.81KB/s    eta 15h 0m coco.pt               0%[                    ]   1.61M  8.31KB/s    eta 15h 0m coco.pt               0%[                    ]   1.61M  9.16KB/s    eta 14h 58mcoco.pt               0%[                    ]   1.62M  8.86KB/s    eta 14h 58mcoco.pt               0%[                    ]   1.62M  8.73KB/s    eta 14h 58mcoco.pt               0%[                    ]   1.62M  8.13KB/s    eta 14h 58mcoco.pt               0%[                    ]   1.62M  8.37KB/s    eta 14h 58mcoco.pt               0%[                    ]   1.63M  8.03KB/s    eta 14h 58mcoco.pt               0%[                    ]   1.63M  8.44KB/s    eta 15h 0m coco.pt               0%[                    ]   1.63M  8.64KB/s    eta 15h 0m coco.pt               0%[                    ]   1.64M  8.64KB/s    eta 15h 0m coco.pt               0%[                    ]   1.64M  8.83KB/s    eta 15h 0m coco.pt               0%[                    ]   1.65M  8.44KB/s    eta 14h 56mcoco.pt               0%[                    ]   1.65M  7.91KB/s    eta 14h 56mcoco.pt               0%[                    ]   1.65M  7.69KB/s    eta 14h 55mcoco.pt               0%[                    ]   1.66M  8.12KB/s    eta 14h 55mcoco.pt               0%[                    ]   1.66M  8.31KB/s    eta 14h 55mcoco.pt               0%[                    ]   1.67M  8.24KB/s    eta 14h 54mcoco.pt               0%[                    ]   1.67M  7.85KB/s    eta 14h 54mcoco.pt               0%[                    ]   1.67M  8.41KB/s    eta 14h 54mcoco.pt               0%[                    ]   1.68M  8.20KB/s    eta 14h 54mcoco.pt               0%[                    ]   1.68M  8.34KB/s    eta 14h 54mcoco.pt               0%[                    ]   1.69M  8.22KB/s    eta 14h 53mcoco.pt               0%[                    ]   1.69M  8.46KB/s    eta 14h 53mcoco.pt               0%[                    ]   1.69M  8.50KB/s    eta 14h 53mcoco.pt               0%[                    ]   1.70M  8.26KB/s    eta 14h 53mcoco.pt               0%[                    ]   1.70M  8.53KB/s    eta 14h 53mcoco.pt               0%[                    ]   1.71M  9.08KB/s    eta 14h 53mcoco.pt               0%[                    ]   1.71M  9.65KB/s    eta 14h 53mcoco.pt               0%[                    ]   1.72M  9.60KB/s    eta 14h 47mcoco.pt               0%[                    ]   1.72M  9.63KB/s    eta 14h 47mcoco.pt               0%[                    ]   1.72M  8.60KB/s    eta 14h 47mcoco.pt               0%[                    ]   1.72M  8.57KB/s    eta 14h 47mcoco.pt               0%[                    ]   1.73M  8.76KB/s    eta 14h 47mcoco.pt               0%[                    ]   1.73M  8.38KB/s    eta 14h 50mcoco.pt               0%[                    ]   1.73M  7.81KB/s    eta 14h 50mcoco.pt               0%[                    ]   1.73M  7.80KB/s    eta 14h 51mcoco.pt               0%[                    ]   1.74M  7.48KB/s    eta 14h 51mcoco.pt               0%[                    ]   1.74M  7.98KB/s    eta 14h 50mcoco.pt               0%[                    ]   1.75M  8.08KB/s    eta 14h 50mcoco.pt               0%[                    ]   1.76M  8.51KB/s    eta 14h 50mcoco.pt               0%[                    ]   1.76M  8.73KB/s    eta 14h 47mcoco.pt               0%[                    ]   1.76M  7.91KB/s    eta 14h 47mcoco.pt               0%[                    ]   1.76M  7.38KB/s    eta 14h 52mcoco.pt               0%[                    ]   1.76M  7.08KB/s    eta 14h 52mcoco.pt               0%[                    ]   1.77M  7.26KB/s    eta 14h 51mcoco.pt               0%[                    ]   1.78M  8.02KB/s    eta 14h 51mcoco.pt               0%[                    ]   1.78M  8.04KB/s    eta 14h 51mcoco.pt               0%[                    ]   1.78M  7.57KB/s    eta 14h 48mcoco.pt               0%[                    ]   1.79M  7.54KB/s    eta 14h 48mcoco.pt               0%[                    ]   1.79M  7.38KB/s    eta 14h 48mcoco.pt               0%[                    ]   1.80M  7.50KB/s    eta 14h 48mcoco.pt               0%[                    ]   1.80M  7.93KB/s    eta 14h 44mcoco.pt               0%[                    ]   1.80M  8.03KB/s    eta 14h 44mcoco.pt               0%[                    ]   1.81M  7.86KB/s    eta 14h 44mcoco.pt               0%[                    ]   1.81M  8.46KB/s    eta 14h 44mcoco.pt               0%[                    ]   1.81M  8.69KB/s    eta 14h 44mcoco.pt               0%[                    ]   1.81M  8.41KB/s    eta 14h 45mcoco.pt               0%[                    ]   1.82M  8.61KB/s    eta 14h 45mcoco.pt               0%[                    ]   1.82M  8.62KB/s    eta 14h 45mcoco.pt               0%[                    ]   1.83M  8.25KB/s    eta 14h 44mcoco.pt               0%[                    ]   1.83M  7.60KB/s    eta 14h 44mcoco.pt               0%[                    ]   1.83M  7.74KB/s    eta 14h 44mcoco.pt               0%[                    ]   1.83M  7.19KB/s    eta 14h 47mcoco.pt               0%[                    ]   1.84M  8.14KB/s    eta 14h 47mcoco.pt               0%[                    ]   1.84M  8.18KB/s    eta 14h 47mcoco.pt               0%[                    ]   1.85M  8.46KB/s    eta 14h 45mcoco.pt               0%[                    ]   1.85M  7.66KB/s    eta 14h 45mcoco.pt               0%[                    ]   1.85M  7.18KB/s    eta 14h 49mcoco.pt               0%[                    ]   1.85M  6.60KB/s    eta 14h 49mcoco.pt               0%[                    ]   1.86M  6.74KB/s    eta 14h 50mcoco.pt               0%[                    ]   1.86M  6.33KB/s    eta 14h 50mcoco.pt               0%[                    ]   1.87M  6.91KB/s    eta 14h 47mcoco.pt               0%[                    ]   1.88M  6.78KB/s    eta 14h 47mcoco.pt               0%[                    ]   1.88M  6.84KB/s    eta 14h 46mcoco.pt               0%[                    ]   1.89M  7.33KB/s    eta 14h 46mcoco.pt               0%[                    ]   1.90M  7.33KB/s    eta 14h 44mcoco.pt               0%[                    ]   1.90M  7.11KB/s    eta 14h 44mcoco.pt               0%[                    ]   1.91M  7.60KB/s    eta 14h 44mcoco.pt               0%[                    ]   1.91M  7.72KB/s    eta 14h 44mcoco.pt               0%[                    ]   1.91M  7.47KB/s    eta 14h 44mcoco.pt               0%[                    ]   1.92M  7.40KB/s    eta 14h 44mcoco.pt               0%[                    ]   1.92M  7.73KB/s    eta 14h 44mcoco.pt               0%[                    ]   1.93M  8.01KB/s    eta 14h 41mcoco.pt               0%[                    ]   1.93M  7.66KB/s    eta 14h 41mcoco.pt               0%[                    ]   1.93M  8.22KB/s    eta 14h 42mcoco.pt               0%[                    ]   1.93M  8.22KB/s    eta 14h 42mcoco.pt               0%[                    ]   1.94M  8.12KB/s    eta 14h 42mcoco.pt               0%[                    ]   1.94M  8.98KB/s    eta 14h 42mcoco.pt               0%[                    ]   1.95M  10.2KB/s    eta 14h 38mcoco.pt               0%[                    ]   1.95M  10.6KB/s    eta 14h 38mcoco.pt               0%[                    ]   1.95M  10.8KB/s    eta 14h 38mcoco.pt               0%[                    ]   1.96M  10.5KB/s    eta 14h 35mcoco.pt               0%[                    ]   1.97M  10.6KB/s    eta 14h 35mcoco.pt               0%[                    ]   1.97M  10.6KB/s    eta 14h 35mcoco.pt               0%[                    ]   1.97M  10.5KB/s    eta 14h 35mcoco.pt               0%[                    ]   1.98M  10.3KB/s    eta 14h 34mcoco.pt               0%[                    ]   1.98M  9.87KB/s    eta 14h 34mcoco.pt               0%[                    ]   1.98M  9.38KB/s    eta 14h 34mcoco.pt               0%[                    ]   1.99M  9.74KB/s    eta 14h 34mcoco.pt               0%[                    ]   2.00M  11.2KB/s    eta 14h 34mcoco.pt               0%[                    ]   2.00M  10.3KB/s    eta 14h 31mcoco.pt               0%[                    ]   2.00M  10.2KB/s    eta 14h 31mcoco.pt               0%[                    ]   2.00M  10.9KB/s    eta 14h 31mcoco.pt               0%[                    ]   2.01M  11.5KB/s    eta 14h 31mcoco.pt               0%[                    ]   2.01M  11.8KB/s    eta 14h 29mcoco.pt               0%[                    ]   2.01M  11.2KB/s    eta 14h 29mcoco.pt               0%[                    ]   2.02M  10.4KB/s    eta 14h 29mcoco.pt               0%[                    ]   2.02M  10.4KB/s    eta 14h 28mcoco.pt               0%[                    ]   2.03M  10.2KB/s    eta 14h 28mcoco.pt               0%[                    ]   2.03M  10.6KB/s    eta 14h 28mcoco.pt               0%[                    ]   2.04M  10.5KB/s    eta 14h 25mcoco.pt               0%[                    ]   2.04M  10.3KB/s    eta 14h 25mcoco.pt               0%[                    ]   2.05M  10.9KB/s    eta 14h 22mcoco.pt               0%[                    ]   2.06M  11.1KB/s    eta 14h 22mcoco.pt               0%[                    ]   2.06M  11.8KB/s    eta 14h 22mcoco.pt               0%[                    ]   2.07M  13.3KB/s    eta 14h 22mcoco.pt               0%[                    ]   2.07M  13.4KB/s    eta 14h 17mcoco.pt               0%[                    ]   2.07M  13.4KB/s    eta 14h 17mcoco.pt               0%[                    ]   2.08M  13.5KB/s    eta 14h 17mcoco.pt               0%[                    ]   2.08M  13.8KB/s    eta 14h 17mcoco.pt               0%[                    ]   2.09M  13.8KB/s    eta 14h 14mcoco.pt               0%[                    ]   2.09M  14.6KB/s    eta 14h 14mcoco.pt               0%[                    ]   2.10M  13.7KB/s    eta 14h 13mcoco.pt               0%[                    ]   2.10M  13.5KB/s    eta 14h 13mcoco.pt               0%[                    ]   2.10M  13.2KB/s    eta 14h 13mcoco.pt               0%[                    ]   2.11M  13.6KB/s    eta 14h 13mcoco.pt               0%[                    ]   2.11M  13.2KB/s    eta 14h 12mcoco.pt               0%[                    ]   2.11M  12.8KB/s    eta 14h 12mcoco.pt               0%[                    ]   2.12M  13.5KB/s    eta 14h 12mcoco.pt               0%[                    ]   2.13M  12.8KB/s    eta 14h 9m coco.pt               0%[                    ]   2.13M  11.7KB/s    eta 14h 9m coco.pt               0%[                    ]   2.13M  11.1KB/s    eta 14h 12mcoco.pt               0%[                    ]   2.13M  10.7KB/s    eta 14h 12mcoco.pt               0%[                    ]   2.14M  10.8KB/s    eta 14h 12mcoco.pt               0%[                    ]   2.14M  10.6KB/s    eta 14h 10mcoco.pt               0%[                    ]   2.15M  9.86KB/s    eta 14h 10mcoco.pt               0%[                    ]   2.15M  9.81KB/s    eta 14h 9m coco.pt               0%[                    ]   2.15M  8.85KB/s    eta 14h 9m coco.pt               0%[                    ]   2.16M  8.08KB/s    eta 14h 13mcoco.pt               0%[                    ]   2.16M  7.43KB/s    eta 14h 13mcoco.pt               0%[                    ]   2.16M  7.13KB/s    eta 14h 15mcoco.pt               0%[                    ]   2.17M  7.28KB/s    eta 14h 15mcoco.pt               0%[                    ]   2.17M  7.16KB/s    eta 14h 15mcoco.pt               0%[                    ]   2.17M  6.60KB/s    eta 14h 16mcoco.pt               0%[                    ]   2.17M  6.12KB/s    eta 14h 16mcoco.pt               0%[                    ]   2.17M  5.71KB/s    eta 14h 22mcoco.pt               0%[                    ]   2.17M  5.55KB/s    eta 14h 22mcoco.pt               0%[                    ]   2.18M  5.13KB/s    eta 14h 25mcoco.pt               0%[                    ]   2.18M  5.33KB/s    eta 14h 25mcoco.pt               0%[                    ]   2.18M  5.15KB/s    eta 14h 25mcoco.pt               0%[                    ]   2.18M  5.23KB/s    eta 14h 25mcoco.pt               0%[                    ]   2.19M  5.10KB/s    eta 14h 26mcoco.pt               0%[                    ]   2.19M  4.91KB/s    eta 14h 26mcoco.pt               0%[                    ]   2.20M  4.90KB/s    eta 14h 26mcoco.pt               0%[                    ]   2.20M  5.05KB/s    eta 14h 24mcoco.pt               0%[                    ]   2.21M  5.43KB/s    eta 14h 24mcoco.pt               0%[                    ]   2.21M  5.62KB/s    eta 14h 22mcoco.pt               0%[                    ]   2.22M  5.58KB/s    eta 14h 22mcoco.pt               0%[                    ]   2.22M  5.62KB/s    eta 14h 22mcoco.pt               0%[                    ]   2.22M  5.41KB/s    eta 14h 21mcoco.pt               0%[                    ]   2.22M  5.07KB/s    eta 14h 21mcoco.pt               0%[                    ]   2.23M  5.80KB/s    eta 14h 22mcoco.pt               0%[                    ]   2.24M  6.06KB/s    eta 14h 22mcoco.pt               0%[                    ]   2.24M  6.17KB/s    eta 14h 22mcoco.pt               0%[                    ]   2.25M  6.18KB/s    eta 14h 21mcoco.pt               0%[                    ]   2.25M  6.18KB/s    eta 14h 21mcoco.pt               0%[                    ]   2.25M  8.34KB/s    eta 14h 21mcoco.pt               0%[                    ]   2.26M  9.15KB/s    eta 14h 19mcoco.pt               0%[                    ]   2.26M  8.99KB/s    eta 14h 19mcoco.pt               0%[                    ]   2.26M  9.30KB/s    eta 14h 19mcoco.pt               0%[                    ]   2.27M  9.67KB/s    eta 14h 19mcoco.pt               0%[                    ]   2.27M  10.6KB/s    eta 14h 19mcoco.pt               0%[                    ]   2.28M  10.6KB/s    eta 14h 14mcoco.pt               0%[                    ]   2.29M  10.6KB/s    eta 14h 14mcoco.pt               0%[                    ]   2.29M  11.1KB/s    eta 14h 14mcoco.pt               0%[                    ]   2.29M  11.2KB/s    eta 14h 14mcoco.pt               0%[                    ]   2.30M  11.2KB/s    eta 14h 11mcoco.pt               0%[                    ]   2.30M  11.1KB/s    eta 14h 11mcoco.pt               0%[                    ]   2.31M  11.0KB/s    eta 14h 11mcoco.pt               0%[                    ]   2.31M  11.8KB/s    eta 14h 8m coco.pt               0%[                    ]   2.32M  13.5KB/s    eta 14h 8m coco.pt               0%[                    ]   2.32M  12.5KB/s    eta 14h 9m coco.pt               0%[                    ]   2.32M  12.3KB/s    eta 14h 9m coco.pt               0%[                    ]   2.33M  12.5KB/s    eta 14h 9m coco.pt               0%[                    ]   2.33M  12.1KB/s    eta 14h 8m coco.pt               0%[                    ]   2.34M  12.5KB/s    eta 14h 8m coco.pt               0%[                    ]   2.34M  12.4KB/s    eta 14h 8m coco.pt               0%[                    ]   2.35M  12.4KB/s    eta 14h 5m coco.pt               0%[                    ]   2.35M  11.0KB/s    eta 14h 5m coco.pt               0%[                    ]   2.35M  9.83KB/s    eta 14h 10mcoco.pt               0%[                    ]   2.35M  8.91KB/s    eta 14h 10mcoco.pt               0%[                    ]   2.35M  8.14KB/s    eta 14h 16mcoco.pt               0%[                    ]   2.35M  7.50KB/s    eta 14h 16mcoco.pt               0%[                    ]   2.35M  --.-KB/s    eta 14h 21mcoco.pt               0%[                    ]   2.35M  --.-KB/s    eta 14h 21mcoco.pt               0%[                    ]   2.35M  --.-KB/s    eta 14h 26mcoco.pt               0%[                    ]   2.35M  --.-KB/s    eta 14h 26mcoco.pt               0%[                    ]   2.35M  --.-KB/s    eta 14h 31mcoco.pt               0%[                    ]   2.35M  --.-KB/s    eta 14h 31mcoco.pt               0%[                    ]   2.35M  --.-KB/s    eta 14h 36mcoco.pt               0%[                    ]   2.35M  --.-KB/s    eta 14h 36mcoco.pt               0%[                    ]   2.35M  --.-KB/s    eta 14h 41mcoco.pt               0%[                    ]   2.35M  --.-KB/s    eta 14h 41mcoco.pt               0%[                    ]   2.35M  --.-KB/s    eta 14h 46mcoco.pt               0%[                    ]   2.35M  --.-KB/s    eta 14h 46mcoco.pt               0%[                    ]   2.35M  --.-KB/s    eta 14h 51mcoco.pt               0%[                    ]   2.35M  --.-KB/s    eta 14h 51mcoco.pt               0%[                    ]   2.35M  --.-KB/s    eta 14h 56mcoco.pt               0%[                    ]   2.35M  --.-KB/s    eta 14h 56mcoco.pt               0%[                    ]   2.35M  --.-KB/s    eta 15h 1m coco.pt               0%[                    ]   2.35M  --.-KB/s    eta 15h 1m coco.pt               0%[                    ]   2.35M  --.-KB/s    eta 15h 6m coco.pt               0%[                    ]   2.35M  --.-KB/s    eta 15h 6m coco.pt               0%[                    ]   2.35M  --.-KB/s    eta 15h 11mcoco.pt               0%[                    ]   2.35M  --.-KB/s    eta 15h 11mcoco.pt               0%[                    ]   2.35M  --.-KB/s    eta 15h 17mcoco.pt               0%[                    ]   2.35M  --.-KB/s    eta 15h 17mcoco.pt               0%[                    ]   2.35M  --.-KB/s    eta 15h 22mcoco.pt               0%[                    ]   2.35M  --.-KB/s    eta 15h 22mcoco.pt               0%[                    ]   2.35M  --.-KB/s    eta 15h 27mcoco.pt               0%[                    ]   2.35M  --.-KB/s    eta 15h 27mcoco.pt               0%[                    ]   2.35M  --.-KB/s    eta 15h 32mcoco.pt               0%[                    ]   2.35M  --.-KB/s    eta 15h 32mcoco.pt               0%[                    ]   2.35M  --.-KB/s    eta 15h 37mcoco.pt               0%[                    ]   2.35M  --.-KB/s    eta 15h 37mcoco.pt               0%[                    ]   2.35M  --.-KB/s    eta 15h 42mcoco.pt               0%[                    ]   2.35M  --.-KB/s    eta 15h 42mcoco.pt               0%[                    ]   2.35M  --.-KB/s    eta 15h 47mcoco.pt               0%[                    ]   2.35M  --.-KB/s    eta 15h 47mcoco.pt               0%[                    ]   2.35M  --.-KB/s    eta 15h 52mcoco.pt               0%[                    ]   2.35M  --.-KB/s    eta 15h 52mcoco.pt               0%[                    ]   2.35M  --.-KB/s    eta 15h 57mcoco.pt               0%[                    ]   2.35M  --.-KB/s    eta 15h 57mcoco.pt               0%[                    ]   2.35M  --.-KB/s    eta 16h 2m coco.pt               0%[                    ]   2.35M  --.-KB/s    eta 16h 2m coco.pt               0%[                    ]   2.35M  --.-KB/s    eta 16h 7m coco.pt               0%[                    ]   2.35M  --.-KB/s    eta 16h 7m coco.pt               0%[                    ]   2.35M  --.-KB/s    eta 16h 12mcoco.pt               0%[                    ]   2.35M  --.-KB/s    eta 16h 12mcoco.pt               0%[                    ]   2.35M  --.-KB/s    eta 16h 18mcoco.pt               0%[                    ]   2.35M  --.-KB/s    eta 16h 18mcoco.pt               0%[                    ]   2.35M  --.-KB/s    eta 16h 23mcoco.pt               0%[                    ]   2.35M  --.-KB/s    eta 16h 23mcoco.pt               0%[                    ]   2.35M  1.41KB/s    eta 16h 26mcoco.pt               0%[                    ]   2.36M  4.80KB/s    eta 16h 26mcoco.pt               0%[                    ]   2.36M  6.61KB/s    eta 16h 26mcoco.pt               0%[                    ]   2.36M  7.23KB/s    eta 16h 26mcoco.pt               0%[                    ]   2.36M  5.95KB/s    eta 16h 24mcoco.pt               0%[                    ]   2.37M  7.56KB/s    eta 16h 24mcoco.pt               0%[                    ]   2.37M  7.57KB/s    eta 16h 24mcoco.pt               0%[                    ]   2.38M  7.90KB/s    eta 16h 21mcoco.pt               0%[                    ]   2.38M  8.12KB/s    eta 16h 21mcoco.pt               0%[                    ]   2.39M  8.19KB/s    eta 16h 20mcoco.pt               0%[                    ]   2.39M  8.23KB/s    eta 16h 20mcoco.pt               0%[                    ]   2.40M  7.26KB/s    eta 16h 22mcoco.pt               0%[                    ]   2.40M  6.34KB/s    eta 16h 22mcoco.pt               0%[                    ]   2.40M  5.99KB/s    eta 16h 25mcoco.pt               0%[                    ]   2.40M  5.81KB/s    eta 16h 25mcoco.pt               0%[                    ]   2.40M  5.97KB/s    eta 16h 25mcoco.pt               0%[                    ]   2.40M  6.13KB/s    eta 16h 25mcoco.pt               0%[                    ]   2.41M  6.43KB/s    eta 16h 24mcoco.pt               0%[                    ]   2.42M  6.71KB/s    eta 16h 24mcoco.pt               0%[                    ]   2.42M  6.96KB/s    eta 16h 24mcoco.pt               0%[                    ]   2.43M  7.17KB/s    eta 16h 21mcoco.pt               0%[                    ]   2.43M  7.26KB/s    eta 16h 21mcoco.pt               0%[                    ]   2.43M  8.00KB/s    eta 16h 21mcoco.pt               0%[                    ]   2.44M  7.41KB/s    eta 16h 21mcoco.pt               0%[                    ]   2.44M  7.36KB/s    eta 16h 21mcoco.pt               0%[                    ]   2.45M  7.53KB/s    eta 16h 18mcoco.pt               0%[                    ]   2.45M  7.80KB/s    eta 16h 18mcoco.pt               0%[                    ]   2.46M  7.85KB/s    eta 16h 18mcoco.pt               0%[                    ]   2.46M  7.94KB/s    eta 16h 18mcoco.pt               0%[                    ]   2.46M  7.79KB/s    eta 16h 16mcoco.pt               0%[                    ]   2.47M  7.92KB/s    eta 16h 16mcoco.pt               0%[                    ]   2.47M  7.28KB/s    eta 16h 17mcoco.pt               0%[                    ]   2.47M  6.74KB/s    eta 16h 17mcoco.pt               0%[                    ]   2.47M  6.68KB/s    eta 16h 19mcoco.pt               0%[                    ]   2.47M  6.68KB/s    in 6m 27s  
-
-2021-11-16 17:48:44 (6.55 KB/s) - Connection closed at byte 2592857. Retrying.
-
---2021-11-16 17:48:45--  (try: 2)  http://web.eecs.umich.edu/~justincj/teaching/eecs498/coco.pt
-Connecting to web.eecs.umich.edu (web.eecs.umich.edu)|141.212.113.214|:80... connected.
-HTTP request sent, awaiting response... 206 Partial Content
-Length: 396583632 (378M), 393990775 (376M) remaining
-Saving to: ‘./datasets/coco.pt’
-
-        [ skipping 2500K ]
-  2500K ,,,,,,,,,, ,,,,,,,,,, ,,,,,,,,,, ,,........ ..........  0% 46.9K 6h21m
-  2550K .......... .......... .......... .......... ..........  0% 10.8K 8h58m
-  2600K .......... .......... .......... .......... ..........  0% 6.48K 12h9m
-  2650K .......... .......... .......... .......... ..........  0% 3.11K 18h46m
-  2700K .......... .......... .......... .......... ..........  0% 5.73K 18h44m
-  2750K .......... .......... .......... .......... ..........  0% 7.40K 17h56m
-  2800K .......... .......... .......... .......... ..........  0% 9.56K 16h52m
-  2850K .......... .......... .......... .......... ..........  0% 6.75K 16h43m
-  2900K .......... .......... .......... .......... ..........  0% 6.86K 16h35m
-  2950K .......... .......... .......... .......... ..........  0% 4.90K 17h8m
-  3000K .......... .......... .......... .......... ..........  0% 5.83K 17h15m
-  3050K .......... .......... .......... .......... ..........  0% 9.66K 16h42m
-  3100K .......... .......... .......... .......... ..........  0% 7.81K 16h27m
-  3150K .......... .......... .......... .......... ..........  0% 7.14K 16h20m
-  3200K .......... .......... .......... .......... ..........  0% 7.04K 16h15m
-  3250K .......... .......... .......... .......... ..........  0% 7.41K 16h7m
-  3300K .......... .......... .......... .......... ..........  0% 5.66K 16h17m
-  3350K .......... .......... .......... .......... ..........  0% 5.81K 16h24m
-  3400K .......... .......... .......... .......... ..........  0% 7.08K 16h20m
-  3450K .......... .......... .......... .......... ..........  0% 6.51K 16h20m
-  3500K .......... .......... .......... .......... ..........  0% 11.6K 15h58m
-  3550K .......... .......... .......... .......... ..........  0% 4.55K 16h19m
-  3600K .......... .......... .......... .......... ..........  0% 5.94K 16h23m
-  3650K .......... .......... .......... .......... ..........  0% 7.92K 16h16m
-  3700K .......... .......... .......... .......... ..........  0% 12.1K 15h57m
-  3750K .......... .......... .......... .......... ..........  0% 4.03K 16h22m
-  3800K .......... .......... .......... .......... ..........  0% 3.20K 17h0m
-  3850K .......... .......... .......... .......... ..........  1% 4.25K 17h18m
-  3900K .......... .......... .......... .......... ..........  1% 11.4K 17h1m
-  3950K .......... .......... .......... .......... ..........  1% 7.88K 16h54m
-  4000K .......... .......... .......... .......... ..........  1% 8.60K 16h45m
-  4050K .......... .......... .......... .......... ..........  1% 11.2K 16h31m
-  4100K .......... .......... .......... .......... ..........  1% 7.60K 16h26m
-  4150K .......... .......... .......... .......... ..........  1% 9.10K 16h17m
-  4200K .......... .......... .......... .......... ..........  1% 10.1K 16h7m
-  4250K .......... .......... .......... .......... ..........  1% 4.75K 16h17m
-  4300K .......... .......... .......... .......... ..........  1% 12.5K 16h4m
-  4350K .......... .......... .......... .......... ..........  1% 10.3K 15h55m
-  4400K .......... .......... .......... .......... ..........  1% 8.34K 15h50m
-  4450K .......... .......... .......... .......... ..........  1% 9.51K 15h43m
-  4500K .......... .......... .......... .......... ..........  1% 8.53K 15h38m
-  4550K .......... .......... .......... .......... ..........  1% 5.15K 15h45m
-  4600K .......... .......... .......... .......... ..........  1% 7.94K 15h42m
-  4650K .......... .......... .......... .......... ..........  1% 6.48K 15h42m
-  4700K                                                         1% 14.0K=5m21s
-
-2021-11-16 18:09:06 (6.77 KB/s) - Read error at byte 4813515/396583632 (Operation timed out). Retrying.
-
---2021-11-16 18:09:08--  (try: 3)  http://web.eecs.umich.edu/~justincj/teaching/eecs498/coco.pt
-Connecting to web.eecs.umich.edu (web.eecs.umich.edu)|141.212.113.214|:80... connected.
-HTTP request sent, awaiting response... 206 Partial Content
-Length: 396583632 (378M), 391770117 (374M) remaining
-Saving to: ‘./datasets/coco.pt’
-
-        [ skipping 4700K ]
-  4700K
-  4700K .......... .......... .......... .......... ..........  1% 8.56K 12h34m
-  4750K .......... .......... .......... .......... ..........  1% 2.94K 24h25m
-  4800K .......... .......... .......... .......... ..........  1% 8.24K 20h33m
-  4850K .......... .......... .......... .......... ..........  1% 5.82K 19h58m
-  4900K .......... .......... .......... .......... ..........  1% 9.51K 18h12m
-  4950K .......... .......... .......... .......... ..........  1% 7.05K 17h40m
-  5000K .......... .......... .......... .......... ..........  1% 10.3K 16h37m
-  5050K .......... .......... .......... .......... ..........  1% 5.72K 16h51m
-  5100K .......... .......... .......... .......... ..........  1% 6.26K 16h52m
-  5150K .......... .......... .......... .......... ..........  1% 7.65K 16h34m
-  5200K .......... .......... .......... .......... ..........  1% 6.83K 16h28m
-  5250K .......... .......... .......... .......... ..........  1% 6.66K 16h25m
-  5300K .......... .......... .......... .......... ..........  1% 6.90K 16h20m
-  5350K .......... .......... .......... .......... ..........  1% 5.75K 16h29m
-  5400K .......... .......... .......... .......... ..........  1% 6.48K 16h28m
-  5450K .......... .......... .......... .......... ..........  1% 3.07K 17h36m
-  5500K .......... .......... .......... .......... ..........  1% 7.98K 17h21m
-  5550K .......... .......... .......... .......... ..........  1% 5.53K 17h27m
-  5600K .......... .......... .......... .......... ..........  1% 8.00K 17h13m
-  5650K .......... .......... .......... .......... ..........  1% 9.64K 16h55m
-  5700K .......... .......... .......... .......... ..........  1% 7.47K 16h47m
-  5750K .......... .......... .......... .......... ..........  1% 5.24K 16h56m
-  5800K .......... .......... .......... .......... ..........  1% 13.6K 16h32m
-  5850K .......... .......... .......... .......... ..........  1% 7.65K 16h25m
-  5900K .......... .......... .......... .......... ..........  1% 6.70K 16h23m
-  5950K .......... .......... .......... .......... ..........  1% 6.34K 16h24m
-  6000K .......... .......... .......... .......... ..........  1% 7.53K 16h19m
-  6050K .......... .......... .......... .......... ..........  1% 10.6K 16h5m
-  6100K .......... .......... .......... .......... ..........  1% 9.11K 15h56m
-  6150K .......... .......... .......... .......... ..........  1% 12.9K 15h40m
-  6200K .......... .......... .......... .......... ..........  1% 5.62K 15h46m
-  6250K .......... .......... .......... .......... ..........  1% 9.89K 15h36m
-  6300K .......... .......... .......... .......... ..........  1% 7.99K 15h32m
-  6350K .......... .......... .......... .......... ..........  1% 6.71K 15h32m
-  6400K .......... .......... .......... .......... ..........  1% 13.7K 15h19m
-  6450K .......... .......... .......... .......... ..........  1% 7.90K 15h15m
-  6500K .......... .......... .......... .......... ..........  1% 8.31K 15h11m
-  6550K .......... .......... .......... .......... ..........  1% 3.28K 15h38m
-  6600K .......... .......... .......... .......... ..........  1% 9.25K 15h31m
-  6650K .......... .......... .......... .......... ..........  1% 8.34K 15h27m
-  6700K .......... .......... .......... .......... ..........  1% 8.61K 15h22m
-  6750K .......... .......... .......... .......... ..........  1% 11.3K 15h13m
-  6800K .......... .......... .......... .......... ..........  1% 8.60K 15h9m
-  6850K .......... .......... .......... .......... ..........  1% 12.9K 15h0m
-  6900K .......... .......... .......... .......... ..........  1% 8.51K 14h56m
-  6950K .......... .......... .......... .......... ..........  1% 10.4K 14h50m
-  7000K .......... .......... .......... .......... ..........  1% 6.67K 14h51m
-  7050K .......... .......... .......... .......... ..........  1% 6.20K 14h53m
-  7100K .......... .......... .......... .......... ..........  1% 5.96K 14h57m
-  7150K .......... .......... .......... .......... ..........  1% 5.81K 15h0m
-  7200K .......... .......... .......... .......... ..........  1% 8.11K 14h58m
-  7250K .......... .......... .......... .......... ..........  1% 6.20K 15h0m
-  7300K .......... .......... .......... .......... ..........  1% 7.40K 14h59m
-  7350K .......... .......... .......... .......... ..........  1% 8.48K 14h56m
-  7400K .......... .......... .......... .......... ..........  1% 10.6K 14h51m
-  7450K .......... .......... .......... .......... ..........  1% 6.24K 14h53m
-  7500K .......... .......... .......... .......... ..........  1% 8.02K 14h51m
-  7550K .......... .......... .......... .......... ..........  1% 6.26K 14h53m
-  7600K .......... .......... .......... .......... ..........  1% 7.08K 14h53m
-  7650K .......... .......... .......... .......... ..........  1% 7.94K 14h51m
-  7700K .......... .......... .......... .......... ..........  2% 4.61K 14h59m
-  7750K .......... .......... .......... .......... ..........  2% 7.10K 14h59m
-  7800K .......... .......... .......... .......... ..........  2% 5.17K 15h4m
-  7850K .......... .......... .......... .......... ..........  2% 7.59K 15h2m
-  7900K .......... .......... .......... .......... ..........  2% 12.2K 14h56m
-  7950K .......... .......... .......... .......... ..........  2% 7.79K 14h55m
-  8000K .......... .......... .......... .......... ..........  2% 8.91K 14h52m
-  8050K .......... .......... .......... .......... ..........  2% 5.50K 14h56m
-  8100K .......... .......... .......... .......... ..........  2% 9.15K 14h53m
-  8150K .......... .......... .......... .......... ..........  2% 6.27K 14h54m
-  8200K .......... .......... .......... .......... ..........  2% 10.5K 14h50m
-  8250K .......... .......... .......... .......... ..........  2% 10.7K 14h46m
-  8300K .......... .......... .......... .......... ..........  2% 10.5K 14h42m
-  8350K .......... .......... .......... .......... ..........  2% 8.94K 14h39m
-  8400K .......... .......... .......... .......... ..........  2% 9.99K 14h36m
-  8450K .......... .......... .......... .......... ..........  2% 7.59K 14h35m
-  8500K .......... .......... .......... .......... ..........  2% 2.82K 14h53m
-  8550K .......... .......... .......... .......... ..........  2% 9.91K 14h49m
-  8600K .......... .......... .......... .......... ..........  2% 10.8K 14h45m
-  8650K .......... .......... .......... .......... ..........  2% 6.55K 14h46m
-  8700K .......... .......... .......... .......... ..........  2% 8.76K 14h44m
-  8750K .......... .......... .......... .......... ..........  2% 9.71K 14h41m
-  8800K .......... .......... .......... .......... ..........  2% 3.06K 14h55m
-  8850K .......... .......... .......... .......... ..........  2% 9.28K 14h52m
-  8900K .......... .......... .......... .......... ..........  2% 10.9K 14h49m
-  8950K .......... .......... .......... .......... ..........  2% 9.37K 14h46m
-  9000K .......... .......... .......... .......... ..........  2% 10.7K 14h42m
-  9050K .......... .......... .......... .......... ..........  2% 10.3K 14h39m
-  9100K .......... .......... .......... .......... ..........  2% 8.32K 14h38m
-  9150K .......... .......... .......... .......... ..........  2% 7.18K 14h38m
-  9200K .......... .......... .......... .......... ..........  2% 21.1K 14h31m
-  9250K .......... .......... .......... .......... ..........  2% 5.28K 14h34m
-  9300K .......... .......... .......... .......... ..........  2% 5.44K 14h37m
-  9350K .......... .......... .......... .......... ..........  2% 8.64K 14h36m
-  9400K .......... .......... .......... .......... ..........  2% 11.3K 14h32m
-  9450K .......... .......... .......... .......... ..........  2% 8.16K 14h31m
-  9500K .......... .......... .......... .......... ..........  2% 10.4K 14h28m
-  9550K .......... .......... .......... .......... ..........  2% 8.00K 14h27m
-  9600K .......... .......... .......... .......... ..........  2% 13.2K 14h23m
-  9650K .......... .......... .......... .......... ..........  2% 17.5K 14h18m
-  9700K .......... .......... .......... .......... ..........  2% 10.8K 14h15m
-  9750K .......... .......... .......... .......... ..........  2% 9.04K 14h13m
-  9800K .......... .......... .......... .......... ..........  2% 12.4K 14h10m
-  9850K .......... .......... .......... .......... ..........  2% 10.3K 14h8m
-  9900K .......... .......... .......... .......... ..........  2% 18.0K 14h3m
-  9950K .......... .......... .......... .......... ..........  2% 9.64K 14h1m
- 10000K .......... .......... .......... .......... ..........  2% 9.92K 13h59m
- 10050K .......... .......... .......... .......... ..........  2% 8.71K 13h58m
- 10100K .......... .......... .......... .......... ..........  2% 11.5K 13h55m
- 10150K .......... .......... .......... .......... ..........  2% 9.37K 13h53m
- 10200K .......... .......... .......... .......... ..........  2% 31.6K 13h47m
- 10250K .......... .......... .......... .......... ..........  2% 10.9K 13h45m
- 10300K .......... .......... .......... .......... ..........  2% 12.5K 13h42m
- 10350K .......... .......... .......... .......... ..........  2% 8.68K 13h41m
- 10400K .......... .......... .......... .......... ..........  2% 12.6K 13h38m
- 10450K .......... .......... .......... .......... ..........  2% 9.86K 13h36m
- 10500K .......... .......... .......... .......... ..........  2% 11.0K 13h34m
- 10550K .......... .......... .......... .......... ..........  2% 11.5K 13h32m
- 10600K .......... .......... .......... .......... ..........  2% 13.7K 13h29m
- 10650K .......... .......... .......... .......... ..........  2% 6.41K 13h30m
- 10700K .......... .......... .......... .......... ..........  2% 10.9K 13h28m
- 10750K .......... .......... .......... .......... ..........  2% 7.48K 13h28m
- 10800K .......... .......... .......... .......... ..........  2% 7.10K 13h29m
- 10850K .......... .......... .......... .......... ..........  2% 4.56K 13h33m
- 10900K .......... .......... .......... .......... ..........  2% 12.6K 13h30m
- 10950K .......... .......... .......... .......... ..........  2% 11.5K 13h28m
- 11000K .......... .......... .......... .......... ..........  2% 9.99K 13h27m
- 11050K .......... .......... .......... .......... ..........  2% 10.9K 13h25m
- 11100K .......... .......... .......... .......... ..........  2% 20.7K 13h21m
- 11150K .......... .......... .......... .......... ..........  2% 10.5K 13h19m
- 11200K .......... .......... .......... .......... ..........  2% 14.8K 13h16m
- 11250K .......... .......... .......... .......... ..........  2% 11.0K 13h14m
- 11300K .......... .......... .......... .......... ..........  2% 7.20K 13h15m
- 11350K .......... .......... .......... .......... ..........  2% 10.1K 13h13m
- 11400K .......... .......... .......... .......... ..........  2% 10.5K 13h12m
- 11450K .......... .......... .......... .......... ..........  2% 12.0K 13h10m
- 11500K .......... .......... .......... .......... ..........  2% 11.5K 13h8m
- 11550K .......... .......... .......... .......... ..........  2% 16.8K 13h5m
- 11600K .......... .......... .......... .......... ..........  3% 11.0K 13h3m
- 11650K .......... .......... .......... .......... ..........  3% 6.62K 13h4m
- 11700K .......... .......... .......... .......... ..........  3% 8.97K 13h3m
- 11750K .......... .......... .......... .......... ..........  3% 7.11K 13h4m
- 11800K .......... .......... .......... .......... ..........  3% 9.60K 13h3m
- 11850K .......... .......... .......... .......... ..........  3% 9.31K 13h2m
- 11900K .......... .......... .......... .......... ..........  3% 13.1K 13h0m
- 11950K .......... .......... .......... .......... ..........  3% 9.56K 12h59m
- 12000K .......... .......... .......... .......... ..........  3% 7.75K 12h59m
- 12050K .......... .......... .......... .......... ..........  3% 8.97K 12h58m
- 12100K .......... .......... .......... .......... ..........  3% 7.11K 12h59m
- 12150K .......... .......... .......... .......... ..........  3% 9.25K 12h58m
- 12200K .......... .......... .......... .......... ..........  3% 7.67K 12h58m
- 12250K .......... .......... .......... .......... ..........  3% 11.0K 12h57m
- 12300K .......... .......... .......... .......... ..........  3% 11.8K 12h55m
- 12350K .......... .......... .......... .......... ..........  3% 14.0K 12h53m
- 12400K .......... .......... .......... .......... ..........  3% 9.88K 12h52m
- 12450K .......... .......... .......... .......... ..........  3% 10.8K 12h50m
- 12500K .......... .......... .......... .......... ..........  3% 10.1K 12h49m
- 12550K .......... .......... .......... .......... ..........  3% 8.41K 12h49m
- 12600K .......... .......... .......... .......... ..........  3% 9.34K 12h48m
- 12650K .......... .......... .......... .......... ..........  3% 8.86K 12h48m
- 12700K .......... .......... .......... .......... ..........  3% 9.30K 12h47m
- 12750K .......... .......... .......... .......... ..........  3% 9.21K 12h47m
- 12800K .......... .......... .......... .......... ..........  3% 7.79K 12h47m
- 12850K .......... .......... .......... .......... ..........  3% 9.68K 12h46m
- 12900K .......... .......... .......... .......... ..........  3% 13.8K 12h44m
- 12950K .......... .......... .......... .......... ..........  3% 6.39K 12h45m
- 13000K .......... .......... .......... .......... ..........  3% 8.99K 12h44m
- 13050K .......... .......... .......... .......... ..........  3% 8.35K 12h44m
- 13100K .......... .......... .......... .......... ..........  3% 9.99K 12h43m
- 13150K .......... .......... .......... .......... ..........  3% 14.9K 12h41m
- 13200K .......... .......... .......... .......... ..........  3% 2.55K 12h51m
- 13250K .......... .......... .......... .......... ..........  3% 6.95K 12h52m
- 13300K .......... .......... .......... .......... ..........  3% 6.27K 12h53m
- 13350K .......... .......... .......... .......... ..........  3% 12.8K 12h51m
- 13400K .......... .......... .......... .......... ..........  3% 6.25K 12h52m
- 13450K .......... .......... .......... .......... ..........  3% 8.06K 12h52m
- 13500K .......... .......... .......... .......... ..........  3% 8.71K 12h52m
- 13550K .......... .......... .......... .......... ..........  3% 13.2K 12h50m
- 13600K .......... .......... .......... .......... ..........  3% 9.02K 12h49m
- 13650K .......... .......... .......... .......... ..........  3% 11.2K 12h48m
- 13700K .......... .......... .......... .......... ..........  3% 4.82K 12h51m
- 13750K .......... .......... .......... .......... ..........  3% 17.7K 12h48m
- 13800K .......... .......... .......... .......... ..........  3% 12.9K 12h47m
- 13850K .......... .......... .......... .......... ..........  3% 9.56K 12h46m
- 13900K .......... .......... .......... .......... ..........  3% 8.63K 12h46m
- 13950K .......... .......... .......... .......... ..........  3% 10.8K 12h44m
- 14000K .......... .......... .......... .......... ..........  3% 13.9K 12h43m
- 14050K .......... .......... .......... .......... ..........  3% 13.9K 12h41m
- 14100K .......... .......... .......... .......... ..........  3% 9.22K 12h40m
- 14150K .......... .......... .......... .......... ..........  3% 11.7K 12h39m
- 14200K .......... .......... .......... .......... ..........  3% 10.1K 12h38m
- 14250K .......... .......... .......... .......... ..........  3% 12.9K 12h37m
- 14300K .......... .......... .......... .......... ..........  3% 9.21K 12h36m
- 14350K .......... .......... .......... .......... ..........  3% 11.7K 12h35m
- 14400K .......... .......... .......... .......... ..........  3% 8.01K 12h35m
- 14450K .......... .......... .......... .......... ..........  3% 11.6K 12h34m
- 14500K .......... .......... .......... .......... ..........  3% 13.1K 12h32m
- 14550K .......... .......... .......... .......... ..........  3% 13.8K 12h30m
- 14600K .......... .......... .......... .......... ..........  3% 13.0K 12h29m
- 14650K .......... .......... .......... .......... ..........  3% 9.35K 12h28m
- 14700K .......... .......... .......... .......... ..........  3% 11.4K 12h27m
- 14750K .......... .......... .......... .......... ..........  3% 9.37K 12h27m
- 14800K .......... .......... .......... .......... ..........  3% 7.86K 12h27m
- 14850K .......... .......... .......... .......... ..........  3% 10.1K 12h26m
- 14900K .......... .......... .......... .......... ..........  3% 5.75K 12h28m
- 14950K .......... .......... .......... .......... ..........  3% 9.89K 12h27m
- 15000K .......... .......... .......... .......... ..........  3% 5.97K 12h28m
- 15050K .......... .......... .......... .......... ..........  3% 8.93K 12h28m
- 15100K .......... .......... .......... .......... ..........  3% 8.81K 12h28m
- 15150K .......... .......... .......... .......... ..........  3% 9.63K 12h27m
- 15200K .......... .......... .......... .......... ..........  3% 9.67K 12h26m
- 15250K .......... .......... .......... .......... ..........  3% 7.26K 12h27m
- 15300K .......... .......... .......... .......... ..........  3% 7.28K 12h27m
- 15350K .......... .......... .......... .......... ..........  3% 8.11K 12h27m
- 15400K .......... .......... .......... .......... ..........  3% 10.5K 12h26m
- 15450K .......... .......... .......... .......... ..........  4% 16.8K 12h25m
- 15500K .......... .......... .......... .......... ..........  4% 21.0K 12h22m
- 15550K .......... .......... .......... .......... ..........  4% 7.62K 12h23m
- 15600K .......... .......... .......... .......... ..........  4% 11.3K 12h22m
- 15650K .......... .......... .......... .......... ..........  4% 6.89K 12h22m
- 15700K .......... .......... .......... .......... ..........  4% 7.17K 12h23m
- 15750K .......... .......... .......... .......... ..........  4% 8.41K 12h23m
- 15800K .......... .......... .......... .......... ..........  4% 6.30K 12h23m
- 15850K .......... .......... .......... .......... ..........  4% 11.5K 12h22m
- 15900K .......... .......... .......... .......... ..........  4% 5.54K 12h24m
- 15950K .......... .......... .......... .......... ..........  4% 14.8K 12h22m
- 16000K .......... .......... .......... .......... ..........  4% 9.00K 12h22m
- 16050K .......... .......... .......... .......... ..........  4% 19.5K 12h20m
- 16100K .......... .......... .......... .......... ..........  4% 9.29K 12h20m
- 16150K .......... .......... .......... .......... ..........  4% 9.51K 12h19m
- 16200K .......... .......... .......... .......... ..........  4% 8.37K 12h19m
- 16250K .......... .......... .......... .......... ..........  4% 10.0K 12h19m
- 16300K .......... .......... .......... .......... ..........  4% 7.63K 12h19m
- 16350K .......... .......... .......... .......... ..........  4% 12.6K 12h18m
- 16400K .......... .......... .......... .......... ..........  4% 8.12K 12h18m
- 16450K .......... .......... .......... .......... ..........  4% 13.3K 12h16m
- 16500K .......... .......... .......... .......... ..........  4% 9.98K 12h16m
- 16550K .......... .......... .......... .......... ..........  4% 8.28K 12h16m
- 16600K .......... .......... .......... .......... ..........  4% 6.41K 12h17m
- 16650K .......... .......... .......... .......... ..........  4% 9.89K 12h16m
- 16700K .......... .......... .......... .......... ..........  4% 12.3K 12h15m
- 16750K .......... .......... .......... .......... ..........  4% 9.09K 12h15m
- 16800K .......... .......... .......... .......... ..........  4% 6.24K 12h15m
- 16850K .......... .......... .......... .......... ..........  4% 10.5K 12h15m
- 16900K .......... .......... .......... .......... ..........  4% 9.52K 12h14m
- 16950K .......... .......... .......... .......... ..........  4% 10.5K 12h14m
- 17000K .......... .......... .......... .......... ..........  4% 14.0K 12h12m
- 17050K .......... .......... .......... .......... ..........  4% 13.9K 12h11m
- 17100K .......... .......... .......... .......... ..........  4% 16.8K 12h10m
- 17150K .......... .......... .......... .......... ..........  4% 9.17K 12h9m
- 17200K .......... .......... .......... .......... ..........  4% 7.59K 12h9m
- 17250K .......... .......... .......... .......... ..........  4% 6.61K 12h10m
- 17300K .......... .......... .......... .......... ..........  4% 5.25K 12h12m
- 17350K .......... .......... .......... .......... ..........  4% 9.02K 12h12m
- 17400K .......... .......... .......... .......... ..........  4% 7.18K 12h12m
- 17450K .......... .......... .......... .......... ..........  4% 6.27K 12h13m
- 17500K .......... .......... .......... .......... ..........  4% 7.63K 12h13m
- 17550K .......... .......... .......... .......... ..........  4% 8.70K 12h13m
- 17600K .......... .......... .......... .......... ..........  4% 6.60K 12h13m
- 17650K .......... .......... .......... .......... ..........  4% 11.0K 12h13m
- 17700K .......... .......... .......... .......... ..........  4% 10.9K 12h12m
- 17750K .......... .......... .......... .......... ..........  4% 10.1K 12h11m
- 17800K .......... .......... .......... .......... ..........  4% 12.4K 12h10m
- 17850K .......... .......... .......... .......... ..........  4% 6.64K 12h11m
- 17900K .......... .......... .......... .......... ..........  4% 7.57K 12h11m
- 17950K .......... .......... .......... .......... ..........  4% 5.44K 12h13m
- 18000K .......... .......... .......... .......... ..........  4% 12.4K 12h12m
- 18050K .......... .......... .......... .......... ..........  4% 7.76K 12h12m
- 18100K .......... .......... .......... .......... ..........  4% 8.12K 12h12m
- 18150K .......... .......... .......... .......... ..........  4% 15.9K 12h10m
- 18200K .......... .......... .......... .......... ..........  4% 11.9K 12h10m
- 18250K .......... .......... .......... .......... ..........  4% 6.21K 12h10m
- 18300K .......... .......... .......... .......... ..........  4% 15.5K 12h9m
- 18350K .......... .......... .......... .......... ..........  4% 21.1K 12h7m
- 18400K .......... .......... .......... .......... ..........  4% 13.6K 12h6m
- 18450K .......... .......... .......... .......... ..........  4% 5.85K 12h7m
- 18500K .......... .......... .......... .......... ..........  4% 11.0K 12h7m
- 18550K .......... .......... .......... .......... ..........  4% 11.3K 12h6m
- 18600K .......... .......... .......... .......... ..........  4% 9.89K 12h5m
- 18650K .......... .......... .......... .......... ..........  4% 9.16K 12h5m
- 18700K .......... .......... .......... .......... ..........  4% 10.5K 12h5m
- 18750K .......... .......... .......... .......... ..........  4% 6.81K 12h5m
- 18800K .......... .......... .......... .......... ..........  4% 11.4K 12h4m
- 18850K .......... .......... .......... .......... ..........  4% 9.52K 12h4m
- 18900K .......... .......... .......... .......... ..........  4% 14.0K 12h3m
- 18950K .......... .......... .......... .......... ..........  4% 8.89K 12h3m
- 19000K .......... .......... .......... .......... ..........  4% 16.8K 12h1m
- 19050K .......... .......... .......... .......... ..........  4% 15.8K 12h0m
- 19100K .......... .......... .......... .......... ..........  4% 6.54K 12h1m
- 19150K .......... .......... .......... .......... ..........  4% 11.4K 12h0m
- 19200K .......... .......... .......... .......... ..........  4% 13.6K 11h59m
- 19250K .......... .......... .......... .......... ..........  4% 14.0K 11h58m
- 19300K .......... .......... .......... .......... ..........  4% 5.71K 11h59m
- 19350K .......... .......... .......... .......... ..........  5% 9.00K 11h59m
- 19400K .......... .......... .......... .......... ..........  5% 13.8K 11h58m
- 19450K .......... .......... .......... .......... ..........  5% 13.4K 11h57m
- 19500K .......... .......... .......... .......... ..........  5% 7.42K 11h57m
- 19550K .......... .......... .......... .......... ..........  5% 9.34K 11h57m
- 19600K .......... .......... .......... .......... ..........  5% 9.65K 11h56m
- 19650K .......... .......... .......... .......... ..........  5% 18.0K 11h55m
- 19700K .......... .......... .......... .......... ..........  5% 9.67K 11h55m
- 19750K .......... .......... .......... .......... ..........  5% 9.00K 11h54m
- 19800K .......... .......... .......... .......... ..........  5% 7.92K 11h54m
- 19850K .......... .......... .......... .......... ..........  5% 9.52K 11h54m
- 19900K .......... .......... .......... .......... ..........  5% 9.46K 11h54m
- 19950K .......... .......... .......... .......... ..........  5% 15.8K 11h53m
- 20000K .......... .......... .......... .......... ..........  5% 11.4K 11h52m
- 20050K .......... .......... .......... .......... ..........  5% 10.5K 11h51m
- 20100K .......... .......... .......... .......... ..........  5% 7.80K 11h52m
- 20150K .......... .......... .......... .......... ..........  5% 9.83K 11h51m
- 20200K .......... .......... .......... .......... ..........  5% 16.8K 11h50m
- 20250K .......... .......... .......... .......... ..........  5% 7.38K 11h50m
- 20300K .......... .......... .......... .......... ..........  5% 12.6K 11h49m
- 20350K .......... .......... .......... .......... ..........  5% 12.6K 11h49m
- 20400K .......... .......... .......... .......... ..........  5% 10.2K 11h48m
- 20450K .......... .......... .......... .......... ..........  5% 13.1K 11h47m
- 20500K .......... .......... .......... .......... ..........  5% 7.25K 11h48m
- 20550K .......... .......... .......... .......... ..........  5% 13.1K 11h47m
- 20600K .......... .......... .......... .......... ..........  5% 6.70K 11h47m
- 20650K .......... .......... .......... .......... ..........  5% 14.5K 11h46m
- 20700K .......... .......... .......... .......... ..........  5% 10.5K 11h46m
- 20750K .......... .......... .......... .......... ..........  5% 9.07K 11h46m
- 20800K .......... .......... .......... .......... ..........  5% 8.90K 11h46m
- 20850K .......... .......... .......... .......... ..........  5% 11.4K 11h45m
- 20900K .......... .......... .......... .......... ..........  5% 8.16K 11h45m
- 20950K .......... .......... .......... .......... ..........  5% 7.67K 11h45m
- 21000K .......... .......... .......... .......... ..........  5% 8.01K 11h45m
- 21050K .......... .......... .......... .......... ..........  5% 8.19K 11h45m
- 21100K .......... .......... .......... .......... ..........  5% 10.4K 11h45m
- 21150K .......... .......... .......... .......... ..........  5% 8.57K 11h45m
- 21200K .......... .......... .......... .......... ..........  5% 14.0K 11h44m
- 21250K .......... .......... .......... .......... ..........  5% 23.0K 11h42m
- 21300K .......... .......... .......... .......... ..........  5% 7.72K 11h43m
- 21350K .......... .......... .......... .......... ..........  5% 7.87K 11h43m
- 21400K .......... .......... .......... .......... ..........  5% 9.52K 11h42m
- 21450K .......... .......... .......... .......... ..........  5% 8.69K 11h42m
- 21500K .......... .......... .......... .......... ..........  5% 8.80K 11h42m
- 21550K .......... .......... .......... .......... ..........  5% 13.3K 11h41m
- 21600K .......... .......... .......... .......... ..........  5% 13.3K 11h40m
- 21650K .......... .......... .......... .......... ..........  5% 11.9K 11h40m
- 21700K .......... .......... .......... .......... ..........  5% 11.1K 11h39m
- 21750K .......... .......... .......... .......... ..........  5% 13.6K 11h38m
- 21800K .......... .......... .......... .......... ..........  5% 9.74K 11h38m
- 21850K .......... .......... .......... .......... ..........  5% 13.3K 11h37m
- 21900K .......... .......... .......... .......... ..........  5% 8.41K 11h37m
- 21950K .......... .......... .......... .......... ..........  5% 14.0K 11h36m
- 22000K .......... .......... .......... .......... ..........  5% 8.42K 11h36m
- 22050K .......... .......... .......... .......... ..........  5% 14.0K 11h36m
- 22100K .......... .......... .......... .......... ..........  5% 6.46K 11h36m
- 22150K .......... .......... .......... .......... ..........  5% 10.5K 11h36m
- 22200K .......... .......... .......... .......... ..........  5% 16.9K 11h35m
- 22250K .......... .......... .......... .......... ..........  5% 12.0K 11h34m
- 22300K .......... .......... .......... .......... ..........  5% 12.0K 11h33m
- 22350K .......... .......... .......... .......... ..........  5% 19.4K 11h32m
- 22400K .......... .......... .......... .......... ..........  5% 10.5K 11h32m
- 22450K .......... .......... .......... .......... ..........  5% 14.1K 11h31m
- 22500K .......... .......... .......... .......... ..........  5% 10.1K 11h31m
- 22550K .......... .......... .......... .......... ..........  5% 7.20K 11h31m
- 22600K .......... .......... .......... .......... ..........  5% 8.23K 11h31m
- 22650K .......... .......... .......... .......... ..........  5% 9.69K 11h31m
- 22700K .......... .......... .......... .......... ..........  5% 18.0K 11h30m
- 22750K .......... .......... .......... .......... ..........  5% 8.38K 11h30m
- 22800K .......... .......... .......... .......... ..........  5% 13.3K 11h29m
- 22850K .......... .......... .......... .......... ..........  5% 12.7K 11h28m
- 22900K .......... .......... .......... .......... ..........  5% 7.00K 11h29m
- 22950K .......... .......... .......... .......... ..........  5% 9.74K 11h28m
- 23000K .......... .......... .......... .......... ..........  5% 11.5K 11h28m
- 23050K .......... .......... .......... .......... ..........  5% 15.8K 11h27m
- 23100K .......... .......... .......... .......... ..........  5% 12.0K 11h26m
- 23150K .......... .......... .......... .......... ..........  5% 10.1K 11h26m
- 23200K .......... .......... .......... .......... ..........  6% 14.0K 11h25m
- 23250K .......... .......... .......... .......... ..........  6% 17.7K 11h24m
- 23300K .......... .......... .......... .......... ..........  6% 13.3K 11h24m
- 23350K .......... .......... .......... .......... ..........  6% 8.42K 11h24m
- 23400K .......... .......... .......... .......... ..........  6% 9.32K 11h23m
- 23450K .......... .......... .......... .......... ..........  6% 12.0K 11h23m
- 23500K .......... .......... .......... .......... ..........  6% 5.18K 11h24m
- 23550K .......... .......... .......... .......... ..........  6% 6.00K 11h25m
- 23600K .......... .......... .......... .......... ..........  6% 12.3K 11h24m
- 23650K .......... .......... .......... .......... ..........  6% 14.9K 11h23m
- 23700K .......... .......... .......... .......... ..........  6% 16.9K 11h22m
- 23750K .......... .......... .......... .......... ..........  6% 12.1K 11h22m
- 23800K .......... .......... .......... .......... ..........  6% 9.32K 11h22m
- 23850K .......... .......... .......... .......... ..........  6% 12.0K 11h21m
- 23900K .......... .......... .......... .......... ..........  6% 7.72K 11h21m
- 23950K .......... .......... .......... .......... ..........  6% 10.4K 11h21m
- 24000K .......... .......... .......... .......... ..........  6% 8.06K 11h21m
- 24050K .......... .......... .......... .......... ..........  6% 12.7K 11h20m
- 24100K .......... .......... .......... .......... ..........  6% 17.8K 11h19m
- 24150K .......... .......... .......... .......... ..........  6% 14.9K 11h19m
- 24200K .......... .......... .......... .......... ..........  6% 11.5K 11h18m
- 24250K .......... .......... .......... .......... ..........  6% 11.5K 11h18m
- 24300K .......... .......... .......... .......... ..........  6% 8.96K 11h18m
- 24350K .......... .......... .......... .......... ..........  6% 9.19K 11h17m
- 24400K .......... .......... .......... .......... ..........  6% 8.63K 11h17m
- 24450K .......... .......... .......... .......... ..........  6% 11.3K 11h17m
- 24500K .......... .......... .......... .......... ..........  6% 8.11K 11h17m
- 24550K .......... .......... .......... .......... ..........  6% 9.90K 11h17m
- 24600K .......... .......... .......... .......... ..........  6% 10.1K 11h16m
- 24650K .......... .......... .......... .......... ..........  6% 11.5K 11h16m
- 24700K .......... .......... .......... .......... ..........  6% 12.6K 11h15m
- 24750K .......... .......... .......... .......... ..........  6% 14.9K 11h15m
- 24800K .......... .......... .......... .......... ..........  6% 11.0K 11h14m
- 24850K .......... .......... .......... .......... ..........  6% 9.66K 11h14m
- 24900K .......... .......... .......... .......... ..........  6% 12.6K 11h13m
- 24950K .......... .......... .......... .......... ..........  6% 5.77K 11h14m
- 25000K .......... .......... .......... .......... ..........  6% 14.0K 11h14m
- 25050K .......... .......... .......... .......... ..........  6% 13.9K 11h13m
- 25100K .......... .......... .......... .......... ..........  6% 8.88K 11h13m
- 25150K .......... .......... .......... .......... ..........  6% 11.3K 11h12m
- 25200K .......... .......... .......... .......... ..........  6% 12.0K 11h12m
- 25250K .......... .......... .......... .......... ..........  6% 8.31K 11h12m
- 25300K .......... .......... .......... .......... ..........  6% 13.1K 11h11m
- 25350K .......... .......... .......... .......... ..........  6% 13.8K 11h11m
- 25400K .......... .......... .......... .......... ..........  6% 12.5K 11h10m
- 25450K .......... .......... .......... .......... ..........  6% 8.03K 11h10m
- 25500K .......... .......... .......... .......... ..........  6% 14.9K 11h10m
- 25550K .......... .......... .......... .......... ..........  6% 14.4K 11h9m
- 25600K .......... .......... .......... .......... ..........  6% 11.4K 11h8m
- 25650K .......... .......... .......... .......... ..........  6% 8.01K 11h8m
- 25700K .......... .......... .......... .......... ..........  6% 19.2K 11h8m
- 25750K .......... .......... .......... .......... ..........  6% 10.9K 11h7m
- 25800K .......... .......... .......... .......... ..........  6% 9.67K 11h7m
- 25850K .......... .......... .......... .......... ..........  6% 14.1K 11h6m
- 25900K .......... .......... .......... .......... ..........  6% 7.87K 11h6m
- 25950K .......... .......... .......... .......... ..........  6% 10.5K 11h6m
- 26000K .......... .......... .......... .......... ..........  6% 5.41K 11h7m
- 26050K .......... .......... .......... .......... ..........  6% 14.5K 11h6m
- 26100K .......... .......... .......... .......... ..........  6% 14.7K 11h6m
- 26150K .......... .......... .......... .......... ..........  6% 16.9K 11h5m
- 26200K .......... .......... .......... .......... ..........  6% 10.1K 11h5m
- 26250K .......... .......... .......... .......... ..........  6% 13.2K 11h4m
- 26300K .......... .......... .......... .......... ..........  6% 8.29K 11h4m
- 26350K .......... .......... .......... .......... ..........  6% 8.63K 11h4m
- 26400K .......... .......... .......... .......... ..........  6% 5.84K 11h5m
- 26450K .......... .......... .......... .......... ..........  6% 8.67K 11h5m
- 26500K .......... .......... .......... .......... ..........  6% 7.63K 11h5m
- 26550K .......... .......... .......... .......... ..........  6% 7.86K 11h5m
- 26600K .......... .......... .......... .......... ..........  6% 25.1K 11h4m
- 26650K .......... .......... .......... .......... ..........  6% 17.6K 11h3m
- 26700K .......... .......... .......... .......... ..........  6% 5.97K 11h4m
- 26750K .......... .......... .......... .......... ..........  6% 13.3K 11h3m
- 26800K .......... .......... .......... .......... ..........  6% 7.81K 11h4m
- 26850K .......... .......... .......... .......... ..........  6% 12.0K 11h3m
- 26900K .......... .......... .......... .......... ..........  6% 11.0K 11h3m
- 26950K .......... .......... .......... .......... ..........  6% 10.4K 11h2m
- 27000K .......... .......... .......... .......... ..........  6% 7.21K 11h3m
- 27050K .......... .......... .......... .......... ..........  6% 12.1K 11h2m
- 27100K .......... .......... .......... .......... ..........  7% 11.4K 11h2m
- 27150K .......... .......... .......... .......... ..........  7% 8.24K 11h2m
- 27200K .......... .......... .......... .......... ..........  7% 12.6K 11h1m
- 27250K .......... .......... .......... .......... ..........  7% 7.62K 11h2m
- 27300K .......... .......... .......... .......... ..........  7% 8.05K 11h2m
- 27350K .......... .......... .......... .......... ..........  7% 6.10K 11h2m
- 27400K .......... .......... .......... .......... ..........  7% 10.8K 11h2m
- 27450K .......... .......... .......... .......... ..........  7% 13.9K 11h1m
- 27500K .......... .......... .......... .......... ..........  7% 7.17K 11h2m
- 27550K .......... .......... .......... .......... ..........  7% 13.1K 11h1m
- 27600K .......... .......... .......... .......... ..........  7% 7.70K 11h1m
- 27650K .......... .......... .......... .......... ..........  7% 6.93K 11h2m
- 27700K .......... .......... .......... .......... ..........  7% 7.32K 11h2m
- 27750K .......... .......... .......... .......... ..........  7% 9.30K 11h2m
- 27800K .......... .......... .......... .......... ..........  7% 12.6K 11h1m
- 27850K .......... .......... .......... .......... ..........  7% 19.3K 11h0m
- 27900K .......... .......... .......... .......... ..........  7% 9.35K 11h0m
- 27950K .......... .......... .......... .......... ..........  7% 10.5K 11h0m
- 28000K .......... .......... .......... .......... ..........  7% 6.60K 11h0m
- 28050K .......... .......... .......... .......... ..........  7% 7.64K 11h1m
- 28100K .......... .......... .......... .......... ..........  7% 7.50K 11h1m
- 28150K .......... .......... .......... .......... ..........  7% 8.00K 11h1m
- 28200K .......... .......... .......... .......... ..........  7% 9.66K 11h1m
- 28250K .......... .......... .......... .......... ..........  7% 14.9K 11h0m
- 28300K .......... .......... .......... .......... ..........  7% 10.5K 11h0m
- 28350K .......... .......... .......... .......... ..........  7% 9.67K 11h0m
- 28400K .......... .......... .......... .......... ..........  7% 10.3K 10h59m
- 28450K .......... .......... .......... .......... ..........  7% 5.24K 11h0m
- 28500K .......... .......... .......... .......... ..........  7% 6.81K 11h1m
- 28550K .......... .......... .......... .......... ..........  7% 7.84K 11h1m
- 28600K .......... .......... .......... .......... ..........  7% 9.15K 11h1m
- 28650K .......... .......... .......... .......... ..........  7% 10.0K 11h0m
- 28700K .......... .......... .......... .......... ..........  7% 11.4K 11h0m
- 28750K .......... .......... .......... .......... ..........  7% 7.22K 11h0m
- 28800K .......... .......... .......... .......... ..........  7% 10.2K 11h0m
- 28850K .......... .......... .......... .......... ..........  7% 9.07K 11h0m
- 28900K .......... .......... .......... .......... ..........  7% 7.57K 11h0m
- 28950K .......... .......... .......... .......... ..........  7% 12.6K 11h0m
- 29000K .......... .......... .......... .......... ..........  7% 8.70K 11h0m
- 29050K .......... .......... .......... .......... ..........  7% 8.98K 11h0m
- 29100K .......... .......... .......... .......... ..........  7% 11.4K 10h59m
- 29150K .......... .......... .......... .......... ..........  7% 8.40K 10h59m
- 29200K .......... .......... .......... .......... ..........  7% 5.99K 11h0m
- 29250K .......... .......... .......... .......... ..........  7% 9.35K 11h0m
- 29300K .......... .......... .......... .......... ..........  7% 10.1K 10h59m
- 29350K .......... .......... .......... .......... ..........  7% 10.5K 10h59m
- 29400K .......... .......... .......... .......... ..........  7% 7.62K 10h59m
- 29450K .......... .......... .......... .......... ..........  7% 11.0K 10h59m
- 29500K .......... .......... .......... .......... ..........  7% 14.9K 10h58m
- 29550K .......... .......... .......... .......... ..........  7% 11.0K 10h58m
- 29600K .......... .......... .......... .......... ..........  7% 14.8K 10h57m
- 29650K .......... .......... .......... .......... ..........  7% 8.98K 10h57m
- 29700K .......... .......... .......... .......... ..........  7% 9.37K 10h57m
- 29750K .......... .......... .......... .......... ..........  7% 16.8K 10h56m
- 29800K .......... .......... .......... .......... ..........  7% 6.48K 10h57m
- 29850K .......... .......... .......... .......... ..........  7% 8.09K 10h57m
- 29900K .......... .......... .......... .......... ..........  7% 11.6K 10h57m
- 29950K .......... .......... .......... .......... ..........  7% 13.8K 10h56m
- 30000K .......... .......... .......... .......... ..........  7% 6.41K 10h57m
- 30050K .......... .......... .......... .......... ..........  7% 8.09K 10h57m
- 30100K .......... .......... .......... .......... ..........  7% 8.26K 10h57m
- 30150K .......... .......... .......... .......... ..........  7% 8.51K 10h57m
- 30200K .......... .......... .......... .......... ..........  7% 13.1K 10h56m
- 30250K .......... .......... .......... .......... ..........  7% 4.36K 10h57m
- 30300K .......... .......... .......... .......... ..........  7% 1.02K 11h7m
- 30350K .......... .......... .......... .......... ..........  7% 7.78K 11h7m
- 30400K .......... .......... .......... .......... ..........  7% 9.28K 11h7m
- 30450K .......... .......... .......... .......... ..........  7% 14.5K 11h7m
- 30500K .......... .......... .......... .......... ..........  7% 11.1K 11h6m
- 30550K .......... .......... .......... .......... ..........  7% 9.02K 11h6m
- 30600K .......... .......... .......... .......... ..........  7% 7.76K 11h6m
- 30650K .......... .......... .......... .......... ..........  7% 12.8K 11h6m
- 30700K .......... .......... .......... .......... ..........  7% 13.0K 11h5m
- 30750K .......... .......... .......... .......... ..........  7% 11.5K 11h5m
- 30800K .......... .......... .......... .......... ..........  7% 11.1K 11h5m
- 30850K .......... .......... .......... .......... ..........  7% 11.1K 11h4m
- 30900K .......... .......... .......... .......... ..........  7% 7.25K 11h5m
- 30950K .......... .......... .......... .......... ..........  8% 12.1K 11h4m
- 31000K .......... .......... .......... .......... ..........  8% 12.9K 11h4m
- 31050K .......... .......... .......... .......... ..........  8% 13.6K 11h3m
- 31100K .......... .......... .......... .......... ..........  8% 12.3K 11h3m
- 31150K .......... .......... .......... .......... ..........  8% 9.49K 11h3m
- 31200K .......... .......... .......... .......... ..........  8% 11.6K 11h2m
- 31250K .......... .......... .......... .......... ..........  8% 8.50K 11h2m
- 31300K .......... .......... .......... .......... ..........  8% 12.8K 11h2m
- 31350K .......... .......... .......... .......... ..........  8% 8.92K 11h2m
- 31400K .......... .......... .......... .......... ..........  8% 11.9K 11h1m
- 31450K .......... .......... .......... .......... ..........  8% 11.7K 11h1m
- 31500K .......... .......... .......... .......... ..........  8% 10.7K 11h0m
- 31550K .......... .......... .......... .......... ..........  8% 11.7K 11h0m
- 31600K .......... .......... .......... .......... ..........  8% 12.8K 11h0m
- 31650K .......... .......... .......... .......... ..........  8% 6.16K 11h0m
- 31700K .......... .......... .......... .......... ..........  8% 7.44K 11h0m
- 31750K .......... .......... .......... .......... ..........  8% 3.52K 11h2m
- 31800K .......... .......... .......... .......... ..........  8% 10.7K 11h2m
- 31850K .......... .......... .......... .......... ..........  8% 8.05K 11h2m
- 31900K .......... .......... .......... .......... ..........  8% 15.1K 11h1m
- 31950K .......... .......... .......... .......... ..........  8% 10.7K 11h1m
- 32000K .......... .......... .......... .......... ..........  8% 3.36K 11h3m
- 32050K .......... .......... .......... .......... ..........  8% 9.93K 11h3m
- 32100K .......... .......... .......... .......... ..........  8% 10.5K 11h2m
- 32150K .......... .......... .......... .......... ..........  8% 5.51K 11h3m
- 32200K .......... .......... .......... .......... ..........  8% 5.81K 11h4m
- 32250K .......... .......... .......... .......... ..........  8% 11.6K 11h3m
- 32300K .......... .......... .......... .......... ..........  8% 8.73K 11h3m
- 32350K .......... .......... .......... .......... ..........  8% 8.57K 11h3m
- 32400K .......... .......... .......... .......... ..........  8% 13.2K 11h3m
- 32450K .......... .......... .......... .......... ..........  8% 6.42K 11h3m
- 32500K .......... .......... .......... .......... ..........  8% 20.3K 11h2m
- 32550K .......... .......... .......... .......... ..........  8% 8.75K 11h2m
- 32600K .......... .......... .......... .......... ..........  8% 10.7K 11h2m
- 32650K .......... .......... .......... .......... ..........  8% 9.67K 11h2m
- 32700K .......... .......... .......... .......... ..........  8% 14.4K 11h1m
- 32750K .......... .......... .......... .......... ..........  8% 11.9K 11h1m
- 32800K .......... .......... .......... .......... ..........  8% 15.4K 11h0m
- 32850K .......... .......... .......... .......... ..........  8% 8.69K 11h0m
- 32900K .......... .......... .......... .......... ..........  8% 11.1K 11h0m
- 32950K .......... .......... .......... .......... ..........  8% 10.2K 11h0m
- 33000K .......... .......... .......... .......... ..........  8% 12.8K 10h59m
- 33050K .......... .......... .......... .......... ..........  8% 7.09K 10h59m
- 33100K .......... .......... .......... .......... ..........  8% 7.04K 11h0m
- 33150K .......... .......... .......... .......... ..........  8% 12.7K 10h59m
- 33200K .......... .......... .......... .......... ..........  8% 8.49K 10h59m
- 33250K .......... .......... .......... .......... ..........  8% 15.2K 10h58m
- 33300K .......... .......... .......... .......... ..........  8% 17.6K 10h58m
- 33350K .......... .......... .......... .......... ..........  8% 11.0K 10h58m
- 33400K .......... .......... .......... .......... ..........  8% 9.54K 10h57m
- 33450K .......... .......... .......... .......... ..........  8% 15.2K 10h57m
- 33500K .......... .......... .......... .......... ..........  8% 13.6K 10h56m
- 33550K .......... .......... .......... .......... ..........  8% 6.37K 10h57m
- 33600K .......... .......... .......... .......... ..........  8% 10.5K 10h56m
- 33650K .......... .......... .......... .......... ..........  8% 15.8K 10h56m
- 33700K .......... .......... .......... .......... ..........  8% 12.9K 10h55m
- 33750K .......... .......... .......... .......... ..........  8% 13.7K 10h55m
- 33800K .......... .......... .......... .......... ..........  8% 9.79K 10h55m
- 33850K .......... .......... .......... .......... ..........  8% 5.04K 10h56m
- 33900K .......... .......... .......... .......... ..........  8% 12.0K 10h55m
- 33950K .......... .......... .......... .......... ..........  8% 7.60K 10h55m
- 34000K .......... .......... .......... .......... ..........  8% 7.08K 10h55m
- 34050K .......... .......... .......... .......... ..........  8% 10.6K 10h55m
- 34100K .......... .......... .......... .......... ..........  8% 7.87K 10h55m
- 34150K .......... .......... .......... .......... ..........  8% 9.58K 10h55m
- 34200K .......... .......... .......... .......... ..........  8% 10.9K 10h55m
- 34250K .......... .......... .......... .......... ..........  8% 10.8K 10h55m
- 34300K .......... .......... .......... .......... ..........  8% 13.2K 10h54m
- 34350K .......... .......... .......... .......... ..........  8% 7.47K 10h54m
- 34400K .......... .......... .......... .......... ..........  8% 8.09K 10h54m
- 34450K .......... .......... .......... .......... ..........  8% 7.72K 10h54m
- 34500K .......... .......... .......... .......... ..........  8% 15.3K 10h54m
- 34550K .......... .......... .......... .......... ..........  8% 12.5K 10h53m
- 34600K .......... .......... .......... .......... ..........  8% 10.4K 10h53m
- 34650K .......... .......... .......... .......... ..........  8% 8.05K 10h53m
- 34700K .......... .......... .......... .......... ..........  8% 16.6K 10h53m
- 34750K .......... .......... .......... .......... ..........  8% 10.1K 10h52m
- 34800K .......... .......... .......... .......... ..........  8% 8.42K 10h52m
- 34850K .......... .......... .......... .......... ..........  9% 12.8K 10h52m
- 34900K .......... .......... .......... .......... ..........  9% 5.70K 10h52m
- 34950K .......... .......... .......... .......... ..........  9% 8.13K 10h53m
- 35000K .......... .......... .......... .......... ..........  9% 13.0K 10h52m
- 35050K .......... .......... .......... .......... ..........  9% 10.7K 10h52m
- 35100K .......... .......... .......... .......... ..........  9% 6.11K 10h52m
- 35150K .......... .......... .......... .......... ..........  9% 10.2K 10h52m
- 35200K .......... .......... .......... .......... ..........  9% 14.8K 10h52m
- 35250K .......... .......... .......... .......... ..........  9% 14.5K 10h51m
- 35300K .......... .......... .......... .......... ..........  9% 11.5K 10h51m
- 35350K .......... .......... .......... .......... ..........  9% 8.60K 10h51m
- 35400K .......... .......... .......... .......... ..........  9% 12.0K 10h50m
- 35450K .......... .......... .......... .......... ..........  9% 12.6K 10h50m
- 35500K .......... .......... .......... .......... ..........  9% 3.58K 10h51m
- 35550K .......... .......... .......... .......... ..........  9% 8.38K 10h51m
- 35600K .......... .......... .......... .......... ..........  9% 4.76K 10h52m
- 35650K .......... .......... .......... .......... ..........  9% 9.93K 10h52m
- 35700K .......... .......... .......... .......... ..........  9% 9.99K 10h52m
- 35750K .......... .......... .......... .......... ..........  9% 8.52K 10h52m
- 35800K .......... .......... .......... .......... ..........  9% 17.5K 10h51m
- 35850K .......... .......... .......... .......... ..........  9% 8.17K 10h51m
- 35900K .......... .......... .......... .......... ..........  9% 11.4K 10h51m
- 35950K .......... .......... .......... .......... ..........  9% 12.6K 10h51m
- 36000K .......... .......... .......... .......... ..........  9% 6.83K 10h51m
- 36050K .......... .......... .......... .......... ..........  9% 10.3K 10h51m
- 36100K .......... .......... .......... .......... ..........  9% 5.69K 10h51m
- 36150K .......... .......... .......... .......... ..........  9% 5.45K 10h52m
- 36200K .......... .......... .......... .......... ..........  9% 11.4K 10h51m
- 36250K .......... .......... .......... .......... ..........  9% 11.8K 10h51m
- 36300K .......... .......... .......... .......... ..........  9% 11.3K 10h51m
- 36350K .......... .......... .......... .......... ..........  9% 13.9K 10h50m
- 36400K .......... .......... .......... .......... ..........  9% 8.03K 10h50m
- 36450K .......... .......... .......... .......... ..........  9% 6.93K 10h50m
- 36500K .......... .......... .......... .......... ..........  9% 11.1K 10h50m
- 36550K .......... .......... .......... .......... ..........  9% 8.26K 10h50m
- 36600K .......... .......... .......... .......... ..........  9% 13.8K 10h50m
- 36650K .......... .......... .......... .......... ..........  9% 9.53K 10h50m
- 36700K .......... .......... .......... .......... ..........  9% 11.4K 10h49m
- 36750K .......... .......... .......... .......... ..........  9% 10.9K 10h49m
- 36800K .......... .......... .......... .......... ..........  9% 19.0K 10h48m
- 36850K .......... .......... .......... .......... ..........  9% 9.31K 10h48m
- 36900K .......... .......... .......... .......... ..........  9% 10.9K 10h48m
- 36950K .......... .......... .......... .......... ..........  9% 8.42K 10h48m
- 37000K .......... .......... .......... .......... ..........  9% 10.0K 10h48m
- 37050K .......... .......... .......... .......... ..........  9% 13.2K 10h47m
- 37100K .......... .......... .......... .......... ..........  9% 9.70K 10h47m
- 37150K .......... .......... .......... .......... ..........  9% 10.5K 10h47m
- 37200K .......... .......... .......... .......... ..........  9% 8.66K 10h47m
- 37250K .......... .......... .......... .......... ..........  9% 10.1K 10h47m
- 37300K .......... .......... .......... .......... ..........  9% 6.45K 10h47m
- 37350K .......... .......... .......... .......... ..........  9% 14.5K 10h47m
- 37400K .......... .......... .......... .......... ..........  9% 8.49K 10h46m
- 37450K .......... .......... .......... .......... ..........  9% 6.26K 10h47m
- 37500K .......... .......... .......... .......... ..........  9% 13.7K 10h46m
- 37550K .......... .......... .......... .......... ..........  9% 11.6K 10h46m
- 37600K .......... .......... .......... .......... ..........  9% 12.6K 10h46m
- 37650K .......... .......... .......... .......... ..........  9% 7.33K 10h46m
- 37700K .......... .......... .......... .......... ..........  9% 7.59K 10h46m
- 37750K .......... .......... .......... .......... ..........  9% 9.12K 10h46m
- 37800K .......... .......... .......... .......... ..........  9% 14.1K 10h45m
- 37850K .......... .......... .......... .......... ..........  9% 7.13K 10h46m
- 37900K .......... .......... .......... .......... ..........  9% 1.64K 10h50m
- 37950K .......... .......... .......... .......... ..........  9% 7.86K 10h50m
- 38000K .......... .......... .......... .......... ..........  9% 5.44K 10h50m
- 38050K .......... .......... .......... .......... ..........  9% 14.9K 10h50m
- 38100K .......... .......... .......... .......... ..........  9% 6.90K 10h50m
- 38150K .......... .......... .......... .......... ..........  9% 10.6K 10h50m
- 38200K .......... .......... .......... .......... ..........  9% 9.65K 10h50m
- 38250K .......... .......... .......... .......... ..........  9% 7.01K 10h50m
- 38300K .......... .......... .......... .......... ..........  9% 13.0K 10h49m
- 38350K .......... .......... .......... .......... ..........  9% 7.77K 10h50m
- 38400K .......... .......... .......... .......... ..........  9% 9.88K 10h49m
- 38450K .......... .......... .......... .......... ..........  9% 10.8K 10h49m
- 38500K .......... .......... .......... .......... ..........  9% 8.18K 10h49m
- 38550K .......... .......... .......... .......... ..........  9% 10.8K 10h49m
- 38600K .......... .......... .......... .......... ..........  9% 7.70K 10h49m
- 38650K .......... .......... .......... .......... ..........  9% 10.7K 10h49m
- 38700K .......... .......... .......... .......... .......... 10% 5.80K 10h49m
- 38750K .......... .......... .......... .......... .......... 10% 9.44K 10h49m
- 38800K .......... .......... .......... .......... .......... 10% 11.6K 10h49m
- 38850K .......... .......... .......... .......... .......... 10% 12.0K 10h48m
- 38900K .......... .......... .......... .......... .......... 10% 11.5K 10h48m
- 38950K .......... .......... .......... .......... .......... 10% 14.5K 10h48m
- 39000K .......... .......... .......... .......... .......... 10% 7.44K 10h48m
- 39050K .......... .......... .......... .......... .......... 10% 8.86K 10h48m
- 39100K .......... .......... .......... .......... .......... 10% 3.94K 10h49m
- 39150K .......... .......... .......... .......... .......... 10% 9.60K 10h49m
- 39200K .......... .......... .......... .......... .......... 10% 9.75K 10h48m
- 39250K .......... .......... .......... .......... .......... 10% 8.88K 10h48m
- 39300K .......... .......... .......... .......... .......... 10% 8.39K 10h48m
- 39350K .......... .......... .......... .......... .......... 10% 12.2K 10h48m
- 39400K .......... .......... .......... .......... .......... 10% 12.8K 10h47m
- 39450K .......... .......... .......... .......... .......... 10% 12.9K 10h47m
- 39500K .......... .......... .......... .......... .......... 10% 12.9K 10h47m
- 39550K .......... .......... .......... .......... .......... 10% 8.96K 10h47m
- 39600K .......... .......... .......... .......... .......... 10% 6.69K 10h47m
- 39650K .......... .......... .......... .......... .......... 10% 14.5K 10h46m
- 39700K .......... .......... .......... .......... .......... 10% 21.0K 10h46m
- 39750K .......... .......... .......... .......... .......... 10% 9.01K 10h46m
- 39800K .......... .......... .......... .......... .......... 10% 10.9K 10h45m
- 39850K .......... .......... .......... .......... .......... 10% 9.54K 10h45m
- 39900K .......... .......... .......... .......... .......... 10% 17.0K 10h45m
- 39950K .......... .......... .......... .......... .......... 10% 15.7K 10h44m
- 40000K .......... .......... .......... .......... .......... 10% 11.8K 10h44m
- 40050K .......... .......... .......... .......... .......... 10% 9.91K 10h44m
- 40100K .......... .......... .......... .......... .......... 10% 11.7K 10h43m
- 40150K .......... .......... .......... .......... .......... 10% 12.2K 10h43m
- 40200K .......... .......... .......... .......... .......... 10% 17.9K 10h43m
- 40250K .......... .......... .......... .......... .......... 10% 19.9K 10h42m
- 40300K .......... .......... .......... .......... .......... 10% 16.2K 10h42m
- 40350K .......... .......... .......... .......... .......... 10% 10.6K 10h41m
- 40400K .......... .......... .......... .......... .......... 10% 9.55K 10h41m
- 40450K .......... .......... .......... .......... .......... 10% 13.4K 10h41m
- 40500K .......... .......... .......... .......... .......... 10% 11.7K 10h40m
- 40550K .......... .......... .......... .......... .......... 10% 5.63K 10h41m
- 40600K .......... .......... .......... .......... .......... 10% 9.39K 10h41m
- 40650K .......... .......... .......... .......... .......... 10% 4.52K 10h42m
- 40700K .......... .......... .......... .......... .......... 10% 4.32K 10h42m
- 40750K .......... .......... .......... .......... .......... 10% 13.0K 10h42m
- 40800K .......... .......... .......... .......... .......... 10% 11.8K 10h42m
- 40850K .......... .......... .......... .......... .......... 10% 6.35K 10h42m
- 40900K .......... .......... .......... .......... .......... 10% 9.09K 10h42m
- 40950K .......... .......... .......... .......... .......... 10% 9.65K 10h42m
- 41000K .......... .......... .......... .......... .......... 10% 13.1K 10h41m
- 41050K .......... .......... .......... .......... .......... 10% 10.8K 10h41m
- 41100K .......... .......... .......... .......... .......... 10% 6.56K 10h41m
- 41150K .......... .......... .......... .......... .......... 10% 9.08K 10h41m
- 41200K .......... .......... .......... .......... .......... 10% 11.1K 10h41m
- 41250K .......... .......... .......... .......... .......... 10% 15.4K 10h41m
- 41300K .......... .......... .......... .......... .......... 10% 9.18K 10h40m
- 41350K .......... .......... .......... .......... .......... 10% 10.9K 10h40m
- 41400K .......... .......... .......... .......... .......... 10% 6.85K 10h40m
- 41450K .......... .......... .......... .......... .......... 10% 10.4K 10h40m
- 41500K .......... .......... .......... .......... .......... 10% 8.54K 10h40m
- 41550K .......... .......... .......... .......... .......... 10% 8.41K 10h40m
- 41600K .......... .......... .......... .......... .......... 10% 10.9K 10h40m
- 41650K .......... .......... .......... .......... .......... 10% 9.28K 10h40m
- 41700K .......... .......... .......... .......... .......... 10% 12.6K 10h39m
- 41750K .......... .......... .......... .......... .......... 10% 8.63K 10h39m
- 41800K .......... .......... .......... .......... .......... 10% 14.4K 10h39m
- 41850K .......... .......... .......... .......... .......... 10% 8.48K 10h39m
- 41900K .......... .......... .......... .......... .......... 10% 8.08K 10h39m
- 41950K .......... .......... .......... .......... .......... 10% 13.0K 10h39m
- 42000K .......... .......... .......... .......... .......... 10% 8.19K 10h39m
- 42050K .......... .......... .......... .......... .......... 10% 8.17K 10h39m
- 42100K .......... .......... .......... .......... .......... 10% 12.9K 10h38m
- 42150K .......... .......... .......... .......... .......... 10% 11.1K 10h38m
- 42200K .......... .......... .......... .......... .......... 10% 5.12K 10h39m
- 42250K .......... .......... .......... .......... .......... 10% 6.04K 10h39m
- 42300K .......... .......... .......... .......... .......... 10% 10.2K 10h39m
- 42350K .......... .......... .......... .......... .......... 10% 12.0K 10h38m
- 42400K .......... .......... .......... .......... .......... 10% 10.0K 10h38m
- 42450K .......... .......... .......... .......... .......... 10% 11.4K 10h38m
- 42500K .......... .......... .......... .......... .......... 10% 14.0K 10h37m
- 42550K .......... .......... .......... .......... .......... 10% 5.32K 10h38m
- 42600K .......... .......... .......... .......... .......... 11% 12.4K 10h38m
- 42650K .......... .......... .......... .......... .......... 11% 15.2K 10h37m
- 42700K .......... .......... .......... .......... .......... 11% 13.3K 10h37m
- 42750K .......... .......... .......... .......... .......... 11% 9.15K 10h37m
- 42800K .......... .......... .......... .......... .......... 11% 8.19K 10h37m
- 42850K .......... .......... .......... .......... .......... 11% 6.60K 10h37m
- 42900K .......... .......... .......... .......... .......... 11% 7.71K 10h37m
- 42950K .......... .......... .......... .......... .......... 11% 7.00K 10h37m
- 43000K .......... .......... .......... .......... .......... 11% 8.72K 10h37m
- 43050K .......... .......... .......... .......... .......... 11% 23.9K 10h36m
- 43100K .......... .......... .......... .......... .......... 11% 14.0K 10h36m
- 43150K .......... .......... .......... .......... .......... 11% 24.0K 10h35m
- 43200K .......... .......... .......... .......... .......... 11% 16.8K 10h35m
- 43250K .......... .......... .......... .......... .......... 11% 14.4K 10h35m
- 43300K .......... .......... .......... .......... .......... 11% 13.2K 10h34m
- 43350K .......... .......... .......... .......... .......... 11% 11.3K 10h34m
- 43400K .......... .......... .......... .......... .......... 11% 12.5K 10h34m
- 43450K .......... .......... .......... .......... .......... 11% 13.1K 10h33m
- 43500K .......... .......... .......... .......... .......... 11% 8.09K 10h33m
- 43550K .......... .......... .......... .......... .......... 11% 9.20K 10h33m
- 43600K .......... .......... .......... .......... .......... 11% 8.91K 10h33m
- 43650K .......... .......... .......... .......... .......... 11% 9.33K 10h33m
- 43700K .......... .......... .......... .......... .......... 11% 14.6K 10h33m
- 43750K .......... .......... .......... .......... .......... 11% 4.69K 10h33m
- 43800K .......... .......... .......... .......... .......... 11% 11.0K 10h33m
- 43850K .......... .......... .......... .......... .......... 11% 15.8K 10h33m
- 43900K .......... .......... .......... .......... .......... 11% 14.7K 10h32m
- 43950K .......... .......... .......... .......... .......... 11% 10.8K 10h32m
- 44000K .......... .......... .......... .......... .......... 11% 8.38K 10h32m
- 44050K .......... .......... .......... .......... .......... 11% 8.72K 10h32m
- 44100K .......... .......... .......... .......... .......... 11% 3.33K 10h33m
- 44150K .......... .......... .......... .......... .......... 11% 15.6K 10h33m
- 44200K .......... .......... .......... .......... .......... 11% 8.36K 10h33m
- 44250K .......... .......... .......... .......... .......... 11% 6.65K 10h33m
- 44300K .......... .......... .......... .......... .......... 11% 9.55K 10h33m
- 44350K .......... .......... .......... .......... .......... 11% 5.80K 10h33m
- 44400K .......... .......... .......... .......... .......... 11% 10.6K 10h33m
- 44450K .......... .......... .......... .......... .......... 11% 12.7K 10h33m
- 44500K .......... .......... .......... .......... .......... 11% 20.6K 10h32m
- 44550K .......... .......... .......... .......... .......... 11% 7.67K 10h32m
- 44600K .......... .......... .......... .......... .......... 11% 12.1K 10h32m
- 44650K .......... .......... .......... .......... ..
