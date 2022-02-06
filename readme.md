@@ -1,3 +1,80 @@
+# assignment 3
+This is a pretty big assignment. Without prior experience with cs231n it would probably take 2-3 weeks (or more) to do it properly from scratch. The main issue is of course to get backpropagation right but there are many other issues. For example in `SpatialBatchNorm` you should be very careful with permuting dimensions and so on.
+
+## Q1 - fully connected networks
+
+- This is more or less straightforward question. The most nontrivial question is as usual - backpropagation. But in this case we have a detailed description in cs231n notes [link](https://cs231n.github.io/linear-classify/) and [link](https://cs231n.github.io/neural-networks-case-study/).
+
+## Q2 - convolutional networks
+
+### overfit small data
+
+- It turns out that without proper initialization and using batch norm it's really hard to get a correct combination of learning rate and weight scale. As we may see in this example basically all combinations give us `train_acc=.160000` after 10 epochs. This means the net just doesn't learn anything.
+- After implementing Kaiming initialization we may see that even within 1 epoch it helps the net to get accuracy almost 2 times higher.
+
+### Kaiming initialization
+- There's no question about why we should do this (from *He et al., 2015*):
+
+> This product is the key to the initialization design. A proper initialization method should avoid reducing or magnifying the magnitudes of input signals exponentially.
+
+- There's also no question what gain we should use: formulas (7) and (8), (9) are different precisely because we use ReLU. And we can infer gain of 2 from the (9) formula.
+
+- The main question here - what formula should we actually use? In *Glorot et al.* we may read about formula that uses both `n_in` and `n_out`. In the second paper *He et al.* we may see `n_l` without clear specification what is that. 
+- Fortunately the correct formulas are specified in the assignment: 1) in case of a linear net we use `n_in`; 2) in case of a convolution net we also use `n_in` but we have to compute it: `num_in_channels * K * K `, where `K` is the number of a filter.
+
+### train a good model
+
+- We trained a model with 75.18% accuracy on the validation set and 74.68% on the test set. That's higher than mentioned in the notebook. 
+- Within 60 sec. we don't have too much flexibility in building a net. So we just take the first half of VGG 11 and modified it a little bit. We don't modify the learning rate - everything works with the rate that was used in the notebook in previous exercises.
+
+```python
+...
+num_filters=[32, 64, 128, 128],
+max_pools=[0, 1, 3]
+...
+```
+
+### batch norm
+#### forward pass
+For the training pass we have to implement `Algorithm 1` from *Ioffe et al., 2015* (p.3):
+
+- compute mean and var over mini-batch;
+- normalize x based on mean and var of mini-batch;
+- scale and shift normalized x based on gamma and beta;
+
+Why do we need to scale and shift?
+
+> Note that simply normalizing each input of a layer may change what the layer can represent. For instance, nor- malizing the inputs of a sigmoid would constrain them to the linear regime of the nonlinearity. To address this, we make sure that the transformation inserted in the network can represent the identity transform.
+
+We also keep tracking of running mean and var and use them during test pass. We use them instead of computing mean and variance over test mini-batch (this is not mentioned in the paper). 
+
+#### backward pass
+We implemented 2 approaches:
+
+- Computation graph (it's rather tricky and requires a separate post);
+- Using analytical form of the gradient. A good place to start - formulas in the paper. We can implement them as a first step. We may also simplify them - there are at least 2 possible formulas (both of them are implemented). Here's my [gist](https://gist.github.com/ilyarudyak/55ff4d9c705964eb3dc83bde091d97a8) with deriving those formulas.
+
+#### potential bug
+I was not able to run code on `cuda` with batch normalization, I got the following error message (class `FastConv`):
+
+> `RuntimeError: set_sizes_and_strides is not allowed on a Tensor created from .data or .detach().
+If your intent is to change the metadata of a Tensor (such as sizes / strides / storage / storage_offset) without autograd tracking the change, remove the .data / .detach() call and wrap the change in a with torch.no_grad(): block`.
+
+But it seems we can wrap it in this block and it works (see details in the file). 
+
+#### applications
+We have 2 toy examples in the assignment that illustrate usefullness of a batch norm. 
+
+- First we train on a small sett of 500 examples with some fixed `lr=1e-3`: we may see that the net with BN has much better training accuracy (.95 vs .43) within 10 epochs. This is a hint that a net without BN is much more sensitive to a learning rate.
+- We check this in the second example. We may see that training accuracy: 1) less depends on learning rate; and 2) it's a bit higher than accuracy without BN in general.
+
+#### spatial batch norm
+- That's in fact can be done using our previous `BatchNorm` class. The only thing we should be careful with - we need to deal with dimensions carefully. What we need - average over N, H, W instead of N in a regular case. As explaned in A1 we can't just reshape - we need first switch dimensions:
+
+```python
+x2d = x.permute(0, 2, 3, 1).reshape(N*H*W, C)
+```
+
 # assignment 4
 ## Q1 - pytorch autograd
 
@@ -99,7 +176,9 @@ different layers of the hierarchy one can perform gradient descent on a white no
 
 ## Q2 Faster R-CNN
 
-
+### how to use markdown preview
+- [markdown preview](https://github.com/facelessuser/MarkdownPreview)
+- [key binding](https://plaintext-productivity.net/2-04-how-to-set-up-sublime-text-for-markdown-editing.html)
 
 
 

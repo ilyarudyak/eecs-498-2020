@@ -192,7 +192,7 @@ cython_debug/
 /*/mAP/*
 assignment-5/mAP/*
 assignment-5/mAP/
-
+*.pth
 
 
 # End of https://www.toptal.com/developers/gitignore/api/python,macos,jupyternotebooks
