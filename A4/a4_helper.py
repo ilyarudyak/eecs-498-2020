@@ -97,7 +97,7 @@ def jitter(X, ox, oy):
   return X
 
 
-def load_CIFAR(path='./datasets/'):
+def load_CIFAR(path='/content/drive/MyDrive/colab/_datasets'):
   NUM_TRAIN = 49000
   # The torchvision.transforms package provides tools for preprocessing data
   # and for performing data augmentation; here we set up a transform to
@@ -113,6 +113,7 @@ def load_CIFAR(path='./datasets/'):
   # iterates through the Dataset and forms minibatches. We divide the CIFAR-10
   # training set into train and val sets by passing a Sampler object to the
   # DataLoader telling how it should sample from the underlying Dataset.
+  
   cifar10_train = dset.CIFAR10(path, train=True, download=True,
                                transform=transform)
   loader_train = DataLoader(cifar10_train, batch_size=64, 
@@ -126,6 +127,7 @@ def load_CIFAR(path='./datasets/'):
   cifar10_test = dset.CIFAR10(path, train=False, download=True, 
                               transform=transform)
   loader_test = DataLoader(cifar10_test, batch_size=64)
+
   return loader_train, loader_val, loader_test
 
 
