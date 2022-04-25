@@ -23,6 +23,7 @@ class_to_idx = {'aeroplane':0, 'bicycle':1, 'bird':2, 'boat':3, 'bottle':4,
 }
 idx_to_class = {i:c for c, i in class_to_idx.items()}
 
+
 def get_pascal_voc2007_data(image_root, split='train'):
   """
   Use torchvision.datasets
@@ -53,16 +54,24 @@ def pascal_voc2007_loader(dataset, batch_size, num_workers=0):
 
 
 def voc_collate_fn(batch_lst, reshape_size=224):
+    """
+    We need a custom collate_fn when we have sequences of different length.
+    We have to pad them on a per batch level (so length can be different between batches).
+    https://python.plainenglish.io/understanding-collate-fn-in-pytorch-f9d1742647d3
+    :batch_lst - list of (img, ann) tuples
+    """
     preprocess = transforms.Compose([
-      transforms.Resize((reshape_size, reshape_size)),
-      transforms.ToTensor(),
-      transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
-      ])
+        # resize to (224, 224)
+        transforms.Resize((reshape_size, reshape_size)),
+        transforms.ToTensor(),
+        transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
+    ])
     
-    batch_size = len(batch_lst)
+    batch_size = len(batch_lst) 
     
     img_batch = torch.zeros(batch_size, 3, reshape_size, reshape_size)
     
+    # we have to pad up to max number of boxes in this batch
     max_num_box = max(len(batch_lst[i][1]['annotation']['object']) \
                       for i in range(batch_size))
 
@@ -72,24 +81,31 @@ def voc_collate_fn(batch_lst, reshape_size=224):
     img_id_list = []
     
     for i in range(batch_size):
-      img, ann = batch_lst[i]
-      w_list.append(img.size[0]) # image width
-      h_list.append(img.size[1]) # image height
-      img_id_list.append(ann['annotation']['filename'])
-      img_batch[i] = preprocess(img)
-      all_bbox = ann['annotation']['object']
-      if type(all_bbox) == dict: # inconsistency in the annotation file
-        all_bbox = [all_bbox]
-      for bbox_idx, one_bbox in enumerate(all_bbox):
-        bbox = one_bbox['bndbox']
-        obj_cls = one_bbox['name']
-        box_batch[i][bbox_idx] = torch.Tensor([float(bbox['xmin']), float(bbox['ymin']),
+
+        img, ann = batch_lst[i]
+
+        w_list.append(img.size[0]) # image width
+        h_list.append(img.size[1]) # image height
+        img_id_list.append(ann['annotation']['filename'])
+
+        # (1) add image to tensor after preprocessing
+        img_batch[i] = preprocess(img)
+
+        # (2) add bbox and class to tensor (that already contains -1)
+        all_bbox = ann['annotation']['object']
+        if type(all_bbox) == dict: # inconsistency in the annotation file
+            all_bbox = [all_bbox]
+        for bbox_idx, one_bbox in enumerate(all_bbox):
+            bbox = one_bbox['bndbox']
+            obj_cls = one_bbox['name']
+            box_batch[i][bbox_idx] = torch.Tensor([float(bbox['xmin']), float(bbox['ymin']),
           float(bbox['xmax']), float(bbox['ymax']), class_to_idx[obj_cls]])
     
     h_batch = torch.tensor(h_list)
     w_batch = torch.tensor(w_list)
 
     return img_batch, box_batch, w_batch, h_batch, img_id_list
+
 
 def coord_trans(bbox, w_pixel, h_pixel, w_amap=7, h_amap=7, mode='a2p'):
   """
@@ -161,7 +177,7 @@ class FeatureExtractor(torch.nn.Module):
     # and kernel = 7 (224 / 32); stride = kernel = 7; so using standard formula for output we
     # have output (N, 1280, 1, 1); in other words we just average each channel separately;
     if pooling:
-      self.mobilenet.add_module('LastAvgPool', nn.AvgPool2d(math.ceil(reshape_size/32.))) # input: N x 1280 x 7 x 7
+      self.mobilenet.add_module('LastAvgPool', torch.nn.AvgPool2d(math.ceil(reshape_size/32.))) # input: N x 1280 x 7 x 7
 
     for i in self.mobilenet.named_parameters():
       i[1].requires_grad = True # fine-tune all
@@ -182,6 +198,9 @@ class FeatureExtractor(torch.nn.Module):
     img_prepro = img
 
     feat = []
+
+    # for some reason we process piece-by-piece 
+    # but this is just applying of our mobilenet
     process_batch = 500
     for b in range(math.ceil(num_img/process_batch)):
       feat.append(self.mobilenet(img_prepro[b*process_batch:(b+1)*process_batch]
@@ -192,6 +211,7 @@ class FeatureExtractor(torch.nn.Module):
       print('Output feature shape: ', feat.shape)
     
     return feat
+
 
 def GenerateGrid(batch_size, w_amap=7, h_amap=7, dtype=torch.float32, device='cuda'):
   """
@@ -223,7 +243,8 @@ def GenerateGrid(batch_size, w_amap=7, h_amap=7, dtype=torch.float32, device='cu
   return grid
 
 
-def ReferenceOnActivatedAnchors(anchors, bboxes, grid, iou_mat, pos_thresh=0.7, neg_thresh=0.3, method='FasterRCNN'):
+def ReferenceOnActivatedAnchors(anchors, bboxes, grid, iou_mat, pos_thresh=0.7, 
+  neg_thresh=0.3, method='FasterRCNN', device='cuda'):
   """
   Determine the activated (positive) and negative anchors for model training.
 
@@ -279,8 +300,14 @@ def ReferenceOnActivatedAnchors(anchors, bboxes, grid, iou_mat, pos_thresh=0.7, 
   B, A, h_amap, w_amap, _ = anchors.shape
   N = bboxes.shape[1]
 
+  anchors, bboxes, grid, iou_mat = anchors.to(device), bboxes.to(device), grid.to(device), iou_mat.to(device)
+
   # activated/positive anchors
   max_iou_per_anc, max_iou_per_anc_ind = iou_mat.max(dim=-1)
+
+  ########################################################################################################
+  ########################################################################################################
+  ########################################################################################################
   if method == 'FasterRCNN':
     max_iou_per_box = iou_mat.max(dim=1, keepdim=True)[0]
     activated_anc_mask = (iou_mat == max_iou_per_box) & (max_iou_per_box > 0)
@@ -301,7 +328,12 @@ def ReferenceOnActivatedAnchors(anchors, bboxes, grid, iou_mat, pos_thresh=0.7, 
     bboxes = torch.gather(bboxes_expand, -2, max_iou_per_anc_ind.unsqueeze(-1) \
       .unsqueeze(-1).expand(B, A*h_amap*w_amap, 1, 4)).view(-1, 4)
     bboxes = bboxes[activated_anc_ind]
-  else:
+
+  ########################################################################################################
+  ########################################################################################################
+  ########################################################################################################
+
+  else: # method 'YOLO'
     bbox_mask = (bboxes[:, :, 0] != -1) # BxN, indicate invalid boxes
     bbox_centers = (bboxes[:, :, 2:4] - bboxes[:, :, :2]) / 2. + bboxes[:, :, :2] # BxNx2
 
@@ -322,6 +354,10 @@ def ReferenceOnActivatedAnchors(anchors, bboxes, grid, iou_mat, pos_thresh=0.7, 
     GT_class = bboxes[:, 4].long()
     bboxes = bboxes[:, :4]
     activated_anc_ind = (activated_anc_ind / float(activated_anc_mask.shape[-1])).long()
+
+  ########################################################################################################
+  ########################################################################################################
+  ########################################################################################################
 
   print('number of pos proposals: ', activated_anc_ind.shape[0])
   activated_anc_coord = anchors.view(-1, 4)[activated_anc_ind]

@@ -12,7 +12,7 @@ def hello_single_stage_detector():
     print("Hello from single_stage_detector.py!")
 
 
-def GenerateAnchor(anc, grid):
+def GenerateAnchor(anc, grid, device='cuda'):
   """
   Anchor generator.
 
@@ -47,7 +47,7 @@ def GenerateAnchor(anc, grid):
   #   assert anc.dtype == grid.dtype, 'dtype mismatch!'
   #   assert anc.device == grid.device, 'device mismatch!'
   dtype, device = anc.dtype, anc.device
-  anchors = torch.zeros((B, A, Hp, Wp, 4), device='cuda')
+  anchors = torch.zeros((B, A, Hp, Wp, 4), device=device)
 
   # build anchors
   for b in range(B):
@@ -72,7 +72,7 @@ def GenerateAnchor(anc, grid):
   return anchors
 
 
-def GenerateProposal(anchors, offsets, method='YOLO'):
+def GenerateProposal(anchors, offsets, method='YOLO', device='cuda'):
   """
   Proposal generator.
 
@@ -94,6 +94,9 @@ def GenerateProposal(anchors, offsets, method='YOLO'):
   
   """
   assert(method in ['YOLO', 'FasterRCNN'])
+
+  anchors, offsets = anchors.to(device), offsets.to(device)
+
   proposals = None
   ##############################################################################
   # TODO: Given anchor coordinates and the proposed offset for each anchor,    #
@@ -107,7 +110,7 @@ def GenerateProposal(anchors, offsets, method='YOLO'):
   # assert anchors.device == offsets.device
   # dtype = anchors.dtype
   # device = anchors.device
-  proposals = torch.zeros((B, A, Hp, Wp, 4), device='cuda')
+  proposals = torch.zeros((B, A, Hp, Wp, 4), device=device)
 
   # build proposals
   for b in range(B):
@@ -133,17 +136,17 @@ def GenerateProposal(anchors, offsets, method='YOLO'):
             w *= torch.exp(tw)
             h *= torch.exp(th)
 
-            # (3) transform back
+            # (3) transform back (xc, yc, w, h) -> (x_tl, y_tl, x_br, y_br)
             x_tl, y_tl = xc - .5 * w, yc - .5 * h
             x_br, y_br = xc + .5 * w, yc + .5 * h
-            proposals[b, a, i, j, :] = torch.Tensor([x_tl, y_tl, x_br, y_br])           
+            proposals[b, a, i, j, :] = torch.Tensor([x_tl, y_tl, x_br, y_br]).to(device)           
 
 
   ##############################################################################
   #                               END OF YOUR CODE                             #
   ##############################################################################
 
-  return proposals
+  return proposals.to(device)
 
 
 def IoU(proposals, bboxes):
@@ -166,6 +169,8 @@ def IoU(proposals, bboxes):
   with -1.
   """
   iou_mat = None
+
+  proposals = proposals.to('cuda')
   ##############################################################################
   # TODO: Compute the Intersection over Union (IoU) on proposals and GT boxes. #
   # No need to filter invalid proposals/bboxes (i.e., allow region area <= 0). #
@@ -412,11 +417,13 @@ class PredictionNetwork(nn.Module):
 
 
 class SingleStageDetector(nn.Module):
+
   def __init__(self, device='cuda', method='YOLO'):
     super().__init__()
 
     self.anchor_list = torch.tensor([[1., 1], [2, 2], [3, 3], [4, 4], [5, 5], [2, 3], [3, 2], [3, 5], [5, 3]]) # READ ONLY
-    self.feat_extractor = FeatureExtractor() # no pooling
+    # no pooling, so output (BS, 1280, 7, 7)
+    self.feat_extractor = FeatureExtractor() 
     self.num_classes = 20
     self.pred_network = PredictionNetwork(1280, num_anchors=self.anchor_list.shape[0], \
                                           num_classes=self.num_classes)
@@ -659,6 +666,7 @@ def nms(boxes, scores, iou_threshold=0.5, topk=None):
   #                              END OF YOUR CODE                             #
   #############################################################################
   return keep.long()
+
 
 def ConfScoreRegression(conf_scores, GT_conf_scores):
   """
